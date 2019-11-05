@@ -266,18 +266,16 @@ head(eng[,2:5],5)
 
 ##### 7. Average player age in the game
 
-```mean(FIFA19$Age)
-```
+```mean(FIFA19$Age)```
 
 ##### 8. Total teams
 
-```length(unique(FIFA19$Club))
-```
+```length(unique(FIFA19$Club))```
 
 ##### 9. Best 3 Players
 
-```head(FIFA19[,0:5],3)
-```
+```head(FIFA19[,0:5],3)```
+
 ##### 10. 5 Players with most expectations (Overall- Potential)
 
 ```FIFA19$Potential.Gap <-  FIFA19$Potential - FIFA19$Overall
