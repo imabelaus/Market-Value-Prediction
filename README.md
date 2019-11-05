@@ -1,7 +1,8 @@
 
 #### Imanol Belausteguigoitia
 
-#### FIFA 19 Exploratory Data Analysis and Predictive Modelling
+#### FIFA 19 
+#### Exploratory Data Analysis and Predictive Modelling
 
 
 #### Workflow
