@@ -1,11 +1,12 @@
 
-#### IMANOL BELAUSTEGUIGOITIA 
-#### FIFA 19 EDA AND PREDICTIVE ANALYSIS
+#### Imanol Belausteguigoitia
+
+#### FIFA 19 Exploratory Data Analysis and Predictive Modelling
 
 
 #### Workflow
 
-1. Data Cleaning
+1. [Data Cleaning] (#Data Cleaning)
 2. Exploratory Analysis
 3. 10 Facts
 4. Data Mining: Manchester United Case Study
