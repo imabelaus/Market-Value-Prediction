@@ -370,20 +370,20 @@ total_expenditure
 
 ##### Data preprocessing steps
 
-* I) Near Zero Variance 
-* II) Dummification
-* III) Data center and scale
-* IV) Data normalization
-* VI) The Box-Cox Transform
-* VII) cutoff correlation
-* VIII) only numerics
+I) Near Zero Variance 
+II) Dummification
+III) Data center and scale
+IV) Data normalization
+VI) The Box-Cox Transform
+VII) cutoff correlation
+VIII) only numerics
 
 ##### Data preprocessing steps with PCA
 
-* I) Dummification
-* II) Near Zero Variance
-* III) Tranform to numeric values
-* IV) center scale, pca
+I) Dummification
+II) Near Zero Variance
+III) Tranform to numeric values
+IV) center scale, pca
 
 
 ```dim(FIFA19)
