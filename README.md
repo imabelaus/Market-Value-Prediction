@@ -918,5 +918,5 @@ save.image("FIFA19_ML")
 ###   Things I could have done better
 
 
-####### 1. Imputation
-####### 2. Categorical Variables
+##### 1. Imputation
+##### 2. Categorical Variables
