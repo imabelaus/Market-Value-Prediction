@@ -97,7 +97,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 ---
 
-####     2.  Exploratory Analysis     
+###     2.  Exploratory Analysis     
 
 
 ```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
@@ -210,11 +210,14 @@ age_sd <- sd(FIFA19$Age)
   coord_flip() +
   theme(legend.position = "none")
   ```
+  
+  
+![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
 
 ---
 
-####     3.  10 Fun Facts    
+###     3.  10 Fun Facts    
 
 
 
@@ -287,7 +290,7 @@ head(most_expectations[,2:8], 5)
 
 ---
 
-#####     4. Manchester United Case Study    
+###     4. Manchester United Case Study    
 
 
 
