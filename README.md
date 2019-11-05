@@ -908,6 +908,16 @@ rfFit_pca2_results
 ```
 ###### Type: eXtreme Gradient Boosting 
 
+|          Type      |       eXtreme Gradient Boosting  |    
+|:-------------:     |:-------------------------------: | 
+| nrounds            |      1000                        | 
+|max_depth           |      4                           | 
+|eta                 |      0.1                         | 
+| gamma              |      0                           | 
+| colsample_bytree   |      0.7                         | 
+| min_child_weight   |      1                           | 
+| subsample          |      1                           |
+
 * 'nrounds' 1000
 * max_depth = 4
 * eta = 0.1
