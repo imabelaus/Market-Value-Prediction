@@ -351,6 +351,7 @@ new_darmian <- subset(head(darmian_replacement[,2:8],1))
 ```man_u_new_signings <- rbind(new_sanchez, new_mata, new_herrera, new_1_centerback, new_darmian)
 man_u_new_signings
 ```
+
 | Rank   | Name      | Age  | Nationality   | Overall       | Potential  | Club             | Value  |
 | :----: |:---------:| :---:| :-----------: |:-------------:| :---------:| :---------------:| :-----:|
 | 168    | T. Werner | 22   | Germany       | 83            | 87         |RB Leipzig        | 34.5 M |
