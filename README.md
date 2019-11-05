@@ -230,12 +230,18 @@ left
 right <- 1-left
 right
 ```
+* 30 percent
 
 ##### 2. England is the country with most players in the game
 
 ```most_nationalities <- summary(FIFA19$Nationality)
 head(most_nationalities, 10)
 ```
+1. England (1662)
+2. Germany (1198)
+3. Spain (1072)
+4. Argentina(937)
+5. France(914).
 
 ##### 3. Spain has the most players in the top 100
 
