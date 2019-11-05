@@ -277,12 +277,12 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
-##### 6. Englands best rated player is Harry Kane
+### 6. England's best rated player
 
 ```eng<-subset(FIFA19, FIFA19$Nationality == "England" & FIFA19$Overall>80)
 head(eng[,2:5],5)
 ```
-##### Answer:
+###### Answer:
 Harry Kane (89)
 
 ### 7. Average player age in the game
@@ -313,6 +313,7 @@ most_expectations <- FIFA19 %>%
 
 head(most_expectations[,2:8], 5)
 ```
+###### Answer:
 1. J. von Moos
 2. D. Campbell
 3. Y. Lenze
