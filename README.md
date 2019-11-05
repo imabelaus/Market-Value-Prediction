@@ -899,14 +899,12 @@ rfFit_pca2_results
 ```
 ###### S V M 
 
-```svm_pca1_results
-```
+```svm_pca1_results```
 
 ## Best Model
 
-```xgbFit4_pca_results
-```
-###### Type: eXtreme Gradient Boosting 
+```xgbFit4_pca_results```
+
 
 |          Type      |       eXtreme Gradient Boosting  |    
 |:-------------:     |:-------------------------------: | 
@@ -918,13 +916,7 @@ rfFit_pca2_results
 | min_child_weight   |      1                           | 
 | subsample          |      1                           |
 
-* 'nrounds' 1000
-* max_depth = 4
-* eta = 0.1
-* gamma = 0
-* colsample_bytree = 0.7 
-* min_child_weight = 1
-* subsample = 1.
+
 
 |          RMSE  |       RSquared  |       MAE  |
 |:-------------: |:--------------: | :--------: |
