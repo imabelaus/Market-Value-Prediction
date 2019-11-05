@@ -192,6 +192,7 @@ age_sd <- sd(FIFA19$Age)
   coord_flip() +
   theme(legend.position = "none")
   ```
+  ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
 
 ```FIFA19 %>%
   mutate(ElitePlayers = ifelse(Overall >= 85, "Elite", "Not Elite")) %>%
