@@ -931,7 +931,7 @@ rfFit_pca2_results
 
 
 
-###   What could have done better
+###  Optimizing our model
 
 
 Imputation: I decided to do a simple imputation method (mean) because only 0.001133037% of the values were null. It can be argued that more sophisticated algorithms could have been applied to fill the null values but I invested that time in experimenting with the modelling phase.
