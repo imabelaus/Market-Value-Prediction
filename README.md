@@ -15,7 +15,7 @@
 5. Predicting Market Value
 
 ---
-####     1.  Data Cleaning     
+#     1.  Data Cleaning     
 
 
 Setting working directory, libraries and loading data
@@ -97,7 +97,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 ---
 
-###     2.  Exploratory Analysis     
+#     2.  Exploratory Analysis     
 
 
 ```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
@@ -217,7 +217,7 @@ age_sd <- sd(FIFA19$Age)
 
 ---
 
-###     3.  10 Fun Facts    
+#     3.  Top 10 Fun Facts    
 
 
 
@@ -290,7 +290,7 @@ head(most_expectations[,2:8], 5)
 
 ---
 
-###     4. Manchester United Case Study    
+#     4. Manchester United Case Study    
 
 
 
@@ -339,7 +339,7 @@ total_expenditure
 
 ---
 
-####     5. Predicting Market Value      
+#     5. Predicting Market Value      
 
 
 
