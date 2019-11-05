@@ -555,7 +555,7 @@ dim(pca_data)
 
 
 
-####   M O D E L L I N G
+####   Modelling
 
 
 
@@ -596,7 +596,7 @@ summary(model1)
 
 
 
-##### L i n e a r   R e g r e s s i o n
+##### Linear   Regression
 
 
 ###### 1st Linear model (all features)
@@ -629,7 +629,7 @@ summary(lm3_cv)
 results_lm3_cv <- summary(lm3_cv)
 ```
 
-####### Best MSE is 3.533
+###### Best MSE is 3.533
 
 
 ###### with PCA
@@ -643,11 +643,11 @@ summary(lm1_cv_PCA)
 results_csv_PCA <- summary(lm1_cv_PCA)
 ```
 
-####### RMSE 0.959 which is great!
+###### RMSE 0.959 which is great!
 
 
 
-##### S t o c h a s t i c  G r a d i e n t  B o o s t i n g  with  P C A
+##### Stochastic Gradient Boosting with PCA
 
 
 ```set.seed(7)
@@ -669,7 +669,7 @@ results_gbmFit1_pca <- gbmFit1_pca
 
 results_gbmFit1_pca
 ```
-####### RMSE of 1.11
+###### RMSE of 1.11
 
 ```set.seed(7)
 
@@ -690,11 +690,11 @@ results_gbmFit2_pca <- gbmFit2_pca
 
 results_gbmFit2_pca
 ```
-####### RMSE 0.98935
+###### RMSE 0.98935
 
 
 
-###### e X t r e m e   G r a d i e n t    B o o s t i n g   with   P C A
+###### eXtreme Gradient Boosting with PCA
 
 
 ```set.seed(7)
@@ -721,7 +721,7 @@ xgbFit1_pca <- train(Value ~ ., data = pca_data_1,
 results_xgbFit1_pca <- xgbFit1_pca
 ```
 
-####### clearly needs more trees
+###### clearly needs more trees
 
 
 ```set.seed(7)
@@ -779,7 +779,7 @@ xgbFit3_pca_results
 ```
 
 
-####### fourth model
+###### fourth model
 
 
 ```set.seed(7)
@@ -809,7 +809,7 @@ xgbFit4_pca_results
 
 
 
-###### R a n d o m   F o r e s t   with   P C A
+###### Random   Forest   with   PCA
 
 
 
@@ -856,7 +856,7 @@ rfFit_pca2_results
 ```
 
 
-##### S U P P O R T   V E C T O R    M A C H I N E S    WITH    P C A 
+##### SUPPORT   VECTOR    MACHINES    WITH    PCA 
 
 
 ```svm_pca1 <- train(Value~., data=pca_data_1, method = "svmLinear", trControl = tc)
@@ -866,13 +866,13 @@ svm_pca1_results <- svm_pca1
 
 svm_pca1_results
 ```
-####### RMSE 1.01
+###### RMSE 1.01
 
 
 
 
 
-#######  M o d e l    r e s u l t s
+######  M o d e l    r e s u l t s
 
 
 
