@@ -351,9 +351,21 @@ new_darmian <- subset(head(darmian_replacement[,2:8],1))
 ```man_u_new_signings <- rbind(new_sanchez, new_mata, new_herrera, new_1_centerback, new_darmian)
 man_u_new_signings
 ```
+| Rank   | Name      | Age  | Nationality   | Overall       | Potential  | Club             | Value  |
+| :----: |:---------:| :---:| :-----------: |:-------------:| :---------:| :---------------:| :-----:|
+| 168    | T. Werner | 22   | Germany       | 83            | 87         |RB Leipzig        | 34.5 M |
+| 123    | F. Thauvin|   25 | France        | 84            | 87         |O Marseille       | 39.0 M |
+| 122    | Jorginho  |    26| Italy         | 84            | 87         |Chelsea           | 38.0 M |
+| 116    |  N. Süle  |   22 | Germany       | 84            | 90         |FC Bayern München | 36.5 M |
+| 86     | D. Alaba  |    26| Austria       | 85            | 87         |FC Bayern München | 36.5 M |
+
+
 ```total_expenditure <- sum(man_u_new_signings$Value)
 total_expenditure
 ```
+|          Total  |
+|          :----: |
+|186 million euros|
 
 ---
 
