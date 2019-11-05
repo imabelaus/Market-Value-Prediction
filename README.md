@@ -233,6 +233,8 @@ right
 ###### Answer: 
 30 percent
 
+___
+
 #### 2. England is the country with most players in the game
 
 ```most_nationalities <- summary(FIFA19$Nationality)
@@ -245,6 +247,8 @@ head(most_nationalities, 10)
 4. Argentina(937)
 5. France(914).
 
+___
+
 #### 3. Nationality with most players in the top 100
 
 ```top_100 <- FIFA19[0:100,]
@@ -255,6 +259,8 @@ head(top_100,10)
 ###### Answer: 
 Spain (14)
 
+___
+
 #### 4. Oldest player
 
 ```oldest_player <- FIFA19 %>%
@@ -264,6 +270,8 @@ head(oldest_player[,2:5],1)
 ```
 ###### Answer:
 Mexican goalkeeper Oscar Perez (45) 
+
+___
 
 #### 5. Best 10 under 21 players in the game
 
@@ -277,6 +285,8 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
+___
+
 #### 6. England's best rated player
 
 ```eng<-subset(FIFA19, FIFA19$Nationality == "England" & FIFA19$Overall>80)
@@ -285,11 +295,15 @@ head(eng[,2:5],5)
 ###### Answer:
 Harry Kane (89)
 
+___
+
 #### 7. Average player age in the game
 
 ```mean(FIFA19$Age)```
 ###### Answer:
 25.12 years
+
+___
 
 #### 8. Total teams
 
@@ -297,12 +311,16 @@ Harry Kane (89)
 ###### Answer:
 652
 
+___
+
 #### 9. Best 3 Players
 
 ```head(FIFA19[,0:5],3)```
 ###### Answer:
 1. Lionel Messi (94), Cristiano Ronaldo (94)
 2. Neymar (92)
+
+___
 
 #### 10. 5 Players with most expectations (Overall- Potential)
 
