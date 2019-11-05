@@ -1,10 +1,9 @@
 
-#### Imanol Belausteguigoitia
+###            Imanol Belausteguigoitia
+##                    FIFA 19 
+###      Exploratory Data Analysis and Predictive Modelling
 
-#### FIFA 19 
-#### Exploratory Data Analysis and Predictive Modelling
-
----
+![Screen Shot 2019-11-05 at 15 38 01](https://user-images.githubusercontent.com/44293686/68244446-d7386580-ffe2-11e9-8ad5-46c0f3d5cbd4.png)
 
 ## Workflow
 
@@ -57,8 +56,8 @@ percentage_na
 ```
 
 #####  Gettin rid of unuseful variables
-##### Photo, Flag, ID, CLUB LOGO, REAL FACE
-##### LS : RB
+* Photo, Flag, ID, CLUB LOGO, REAL FACE
+* LS : RB
 
 ```FIFA19[,"Photo"] <- NULL
 FIFA19[,"Flag"] <- NULL
