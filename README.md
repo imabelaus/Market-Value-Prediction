@@ -361,7 +361,7 @@ total_expenditure
 
 
 
-##### D A T A       P R E P R O C E S S I N G
+#### Data Pre Processing
 
 
 
@@ -370,33 +370,33 @@ total_expenditure
 
 ##### Data preprocessing steps
 
-I) Near Zero Variance 
-II) Dummification
-III) Data center and scale
-IV) Data normalization
-VI) The Box-Cox Transform
-VII) cutoff correlation
-VIII) only numerics
+I. Near Zero Variance 
+II. Dummification
+III. Data center and scale
+IV. Data normalization
+V. The Box-Cox Transform
+VI. cutoff correlation
+VII. only numerics
 
 ##### Data preprocessing steps with PCA
 
-I) Dummification
-II) Near Zero Variance
-III) Tranform to numeric values
-IV) center scale, pca
+I. Dummification
+II. Near Zero Variance
+III. Tranform to numeric values
+IV. center scale, pca
 
 
 ```dim(FIFA19)
 ```
 
-##### Near Zero Varince
+##### I. Near Zero Varince
 
 
 ```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
 
 dim(FIFA19)
 ```
-##### dummifing position, preferred foot and work rate
+##### II. dummifing position, preferred foot and work rate
 
 ```FIFA19_1 <- cbind(FIFA19, dummy(FIFA19$Position, sep = "_"))
 FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Preferred.Foot, sep = "_"))
@@ -426,13 +426,14 @@ dim(numeric_FIFA19)
 ```
 
 
-##### center and scale
+##### III. center and scale
 
 
 ```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
 FIFA19_transformed <- predict(preProc,numeric_FIFA19)
 ```
-##### since it is centeres and scaled, we will its null values with "0"  (no need to do complex imputations since they are so few)
+##### IV. normalization
+* since it is centeres and scaled, we will its null values with "0"  (no need to do complex imputations since they are so few)
 
 ```FIFA19_transformed <- replace(FIFA19_transformed, is.na(FIFA19_transformed), 0)
 
@@ -441,7 +442,7 @@ View(FIFA19_transformed)
 summary(FIFA19_transformed)
 ```
 
-##### Skewness treatment
+##### V. Skewness treatment
 
 ```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))
 ```
@@ -458,7 +459,7 @@ summary(FIFA19_transformed)
 ##### DATASET 1 -> NON CORRELATED VALUES
 
 
-##### remove high corr
+##### VI. remove high corr
 
 
 ```df2 = cor(FIFA19_transformed_1)
