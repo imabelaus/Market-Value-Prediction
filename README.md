@@ -290,11 +290,12 @@ head(most_expectations[,2:8], 5)
 
 #     4. Manchester United Case Study    
 
+
 ![Screen Shot 2019-11-05 at 15 59 17](https://user-images.githubusercontent.com/44293686/68248885-b1638e80-ffeb-11e9-91d8-ec3442b4628b.png)
 
 
 
-Context
+### Context
 
 Let’s pretend we are part of the Manchester United recruitment team. For next season (2019-20) the team wants to sign players in order to compete for the Premier League title. There are four players that expire contract this season and need to be replaced:
 
@@ -312,7 +313,7 @@ Avoid spending enormous amounts of money for one player, that may be too risky (
 Players that are talented today and don’t need more than one season to give great performances.
 
 ```Man U  (22-27) (more than 80 Overall) , not very valuable # big gap between potential and overall at a good price
-Ole Gunar Solksjaer```
+```
 
 
 
