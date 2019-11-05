@@ -318,8 +318,9 @@ Players that are talented today and don’t need more than one season to give gr
 
 
 ```posible_man_united <- subset(FIFA19, FIFA19$Age < 27 & FIFA19$Overall>80 & FIFA19$Potential.Gap > 0 & FIFA19$Value < 80 & FIFA19$Release.Clause < 80)
-dim(posible_man_united)
 ```
+```dim(posible_man_united)```
+
 
 ```sanchez_replacement <- subset(posible_man_united, Position =="RW")
 dim(sanchez_replacement)
