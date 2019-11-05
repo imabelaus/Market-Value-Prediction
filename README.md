@@ -449,8 +449,7 @@ total_expenditure
 4. center scale, pca
 
 
-```dim(FIFA19)
-```
+```dim(FIFA19)```
 
 ##### I. Near Zero Varince
 
