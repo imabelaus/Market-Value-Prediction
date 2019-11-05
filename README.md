@@ -4,8 +4,9 @@
 #### FIFA 19 
 #### Exploratory Data Analysis and Predictive Modelling
 
+---
 
-#### Workflow
+## Workflow
 
 1. Data Cleaning
 2. Exploratory Analysis
@@ -13,8 +14,8 @@
 4. Data Mining: Manchester United Case Study
 5. Predicting Market Value
 
-
-#####     1.  Data Cleaning     
+---
+####     1.  Data Cleaning     
 
 
 Setting working directory, libraries and loading data
@@ -25,7 +26,7 @@ View(FIFA19)
 load("FIFA19_ML")
 ```
 
-###### Downloading Libraries 
+##### Downloading Libraries 
 
 ```library(caret)
 library(DMwR)
@@ -38,16 +39,16 @@ library(ggpubr)
 library(xgboost)
 ```
 
-###### Inspecting the data
+##### Inspecting the data
 
 ```dim(FIFA19)
 names(FIFA19)
 str(FIFA19)
 ```
 
-###### Checking how complete is the data
+##### Checking how complete is the data
 
-###### Data Completeness
+##### Data Completeness
 
 ```total_na <- sum(is.na(FIFA19))
 total_data <- 18207 * 89 # dim 18207 X 89
@@ -55,9 +56,9 @@ percentage_na <- total_na/total_data
 percentage_na
 ```
 
-######  Gettin rid of unuseful variables
-###### Photo, Flag, ID, CLUB LOGO, REAL FACE
-###### LS : RB
+#####  Gettin rid of unuseful variables
+##### Photo, Flag, ID, CLUB LOGO, REAL FACE
+##### LS : RB
 
 ```FIFA19[,"Photo"] <- NULL
 FIFA19[,"Flag"] <- NULL
@@ -66,7 +67,7 @@ FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
 
-###### Removing unuseful characters (like $)
+##### Removing unuseful characters (like $)
 
 
 ```FIFA19[,'Value'] <- gsub("€","",FIFA19[,'Value'])
@@ -85,7 +86,7 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 View(FIFA19)
 ```
 
-###### Transforming to numeric for further steps
+##### Transforming to numeric for further steps
 
 ```FIFA19$Release.Clause <- as.numeric(FIFA19$Release.Clause)
 FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
@@ -93,9 +94,9 @@ FIFA19$Wage <- as.numeric(FIFA19$Wage)
 FIFA19$Value <- as.numeric(FIFA19$Value)
 ```
 
+---
 
-
-####     2.  Exploratory Analysis     #################
+####     2.  Exploratory Analysis     
 
 
 ```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
@@ -130,7 +131,7 @@ quantile(FIFA19$Overall)
 ```
 
 
-###### YOUNGEST TEAMS
+##### YOUNGEST TEAMS
 
 
 ```age_avg <- mean(FIFA19$Age)
@@ -165,7 +166,7 @@ age_sd <- sd(FIFA19$Age)
   ```
 
 
-###### Highest scores clubs
+##### Highest scores clubs
 
 ``` top_20_overall_clubs <- FIFA19 %>%
   group_by(Club) %>%
@@ -204,13 +205,13 @@ age_sd <- sd(FIFA19$Age)
   ```
 
 
-
+---
 
 ####     3.  10 Fun Facts    
 
 
 
-###### 1. One out of 3 players is left footed
+##### 1. One out of 3 players is left footed
 
 ```table(FIFA19$Preferred.Foot)
 
@@ -220,20 +221,20 @@ right <- 1-left
 right
 ```
 
-###### 2. England is the country with most players in the game
+##### 2. England is the country with most players in the game
 
 ```most_nationalities <- summary(FIFA19$Nationality)
 head(most_nationalities, 10)
 ```
 
-###### 3. Spain has the most players in the top 100
+##### 3. Spain has the most players in the top 100
 
 ```top_100 <- FIFA19[0:100,]
 nationalities_top_100 <- data.frame(table(top_100$Nationality))
 top_100 <-(nationalities_top_100 %>% arrange(desc(Freq)))
 head(top_100,10)
 ```
-###### 4. Mexican goalkeeper Oscar Perez (45) is the oldest player
+##### 4. Mexican goalkeeper Oscar Perez (45) is the oldest player
 
 ```oldest_player <- FIFA19 %>%
   arrange(desc(Age))
@@ -241,33 +242,33 @@ head(top_100,10)
 head(oldest_player[,2:5],1)
 ```
 
-###### 5. Best 10 under 21 players in the game
+##### 5. Best 10 under 21 players in the game
 
 ```young_beasts<-subset(FIFA19, FIFA19$Age < 21 & FIFA19$Overall>75)
 head(young_beasts[,2:5],10)
 ```
 
-###### 6. Englands best rated player is Harry Kane
+##### 6. Englands best rated player is Harry Kane
 
 ```eng<-subset(FIFA19, FIFA19$Nationality == "England" & FIFA19$Overall>80)
 head(eng[,2:5],5)
 ```
 
-###### 7. Average player age in the game
+##### 7. Average player age in the game
 
 ```mean(FIFA19$Age)
 ```
 
-###### 8. Total teams
+##### 8. Total teams
 
 ```length(unique(FIFA19$Club))
 ```
 
-###### 9. Best 3 Players
+##### 9. Best 3 Players
 
 ```head(FIFA19[,0:5],3)
 ```
-###### 10. 5 Players with most expectations (Overall- Potential)
+##### 10. 5 Players with most expectations (Overall- Potential)
 
 ```FIFA19$Potential.Gap <-  FIFA19$Potential - FIFA19$Overall
 
@@ -277,7 +278,7 @@ most_expectations <- FIFA19 %>%
 head(most_expectations[,2:8], 5)
 ```
 
-
+---
 
 #####     4. Manchester United Case Study    
 
@@ -326,48 +327,48 @@ man_u_new_signings
 total_expenditure
 ```
 
+---
 
-
-#####     5. Predicting Market Value      
-
-
-
-###### D A T A       P R E P R O C E S S I N G
+####     5. Predicting Market Value      
 
 
 
-###### guide https://machinelearningmastery.com/pre-process-your-dataset-in-r/
+##### D A T A       P R E P R O C E S S I N G
 
 
-###### Data preprocessing steps
 
-###### a) Near Zero Variance 
-###### b) Dummification
-###### c) Data center and scale
-###### d) Data normalization
-###### e) The Box-Cox Transform
-###### f) cutoff correlation
-###### g) only numerics
+* guide https://machinelearningmastery.com/pre-process-your-dataset-in-r/
 
-###### PCA
 
-###### a) Dummification
-###### b) nzv
-###### c) only numerics
-###### d) center scale, pca
+##### Data preprocessing steps
+
+* I) Near Zero Variance 
+* II) Dummification
+* III) Data center and scale
+* IV) Data normalization
+* VI) The Box-Cox Transform
+* VII) cutoff correlation
+* VIII) only numerics
+
+##### Data preprocessing steps with PCA
+
+* I) Dummification
+* II) Near Zero Variance
+* III) Tranform to numeric values
+* IV) center scale, pca
 
 
 ```dim(FIFA19)
 ```
 
-###### Near Zero Varince
+##### Near Zero Varince
 
 
 ```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
 
 dim(FIFA19)
 ```
-###### dummifing position, preferred foot and work rate
+##### dummifing position, preferred foot and work rate
 
 ```FIFA19_1 <- cbind(FIFA19, dummy(FIFA19$Position, sep = "_"))
 FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Preferred.Foot, sep = "_"))
@@ -385,7 +386,7 @@ View(FIFA19_1)
 
 
 
-###### Model Pre processing   # we will only work with numeric values
+##### Model Pre processing   # we will only work with numeric values
 
 
 
@@ -397,7 +398,7 @@ dim(numeric_FIFA19)
 ```
 
 
-###### center and scale
+##### center and scale
 
 
 ```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
@@ -412,24 +413,24 @@ View(FIFA19_transformed)
 summary(FIFA19_transformed)
 ```
 
-###### Skewness treatment
+##### Skewness treatment
 
 ```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))
 ```
-###### summarize transform parameters
+##### summarize transform parameters
 ```print(preprocessParams)
 ```
-###### transform the dataset using the parameters
+##### transform the dataset using the parameters
 ```FIFA19_transformed_1 <- predict(preprocessParams, FIFA19_transformed)
 ```
-###### summarize the transformed dataset (note pedigree and age)
+##### summarize the transformed dataset (note pedigree and age)
 ```summary(FIFA19_transformed_1)
 ```
 
-###### DATASET 1 -> NON CORRELATED VALUES
+##### DATASET 1 -> NON CORRELATED VALUES
 
 
-###### remove high corr
+##### remove high corr
 
 
 ```df2 = cor(FIFA19_transformed_1)
@@ -442,10 +443,10 @@ dim(FIFA19_transformed_1)
 ```
 
 
-###### DATASET 2 --> PCA (does not discar correlated values) 
+##### DATASET 2 --> PCA (does not discar correlated values) 
 
 
-###### Note that in PCA we do take higly correlated data
+##### Note that in PCA we do take higly correlated data
 
 ```pca_process = preProcess(FIFA19_transformed_1, method=c("pca"))
 print(pca_process)
@@ -466,7 +467,7 @@ dim(pca_data)
 
 
 
-###### Remove Value + insert as non-scaled
+##### Remove Value + insert as non-scaled
 
 ```Value <- FIFA19$Value
 Value <- replace(Value, is.na(Value), 0)
@@ -482,7 +483,7 @@ View(pca_data_1)
 
 
 
-###### Predictor importance
+##### Predictor importance
 
 ```set.seed(7)
 
