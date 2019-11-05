@@ -507,17 +507,13 @@ summary(FIFA19_transformed)
 
 ##### V. Skewness treatment
 
-```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))
-```
+```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))```
 ##### summarize transform parameters
-```print(preprocessParams)
-```
+```print(preprocessParams)```
 ##### transform the dataset using the parameters
-```FIFA19_transformed_1 <- predict(preprocessParams, FIFA19_transformed)
-```
+```FIFA19_transformed_1 <- predict(preprocessParams, FIFA19_transformed)```
 ##### summarize the transformed dataset (note pedigree and age)
-```summary(FIFA19_transformed_1)
-```
+```summary(FIFA19_transformed_1)```
 
 ##### DATASET 1 -> NON CORRELATED VALUES
 
