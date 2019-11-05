@@ -916,14 +916,13 @@ rfFit_pca2_results
 * min_child_weight = 1
 * subsample = 1.
 
+|          RMSE  |       RSquared  |       MAE  |
+|:-------------: |:--------------: | :--------: |
+|0.7217564       |      0.9835732  | 0.3410680  |
 
 
-#### RMSE       Rsquared   MAE
-#### 0.7217564  0.9835732  0.3410680
 
 
-
-save.image("FIFA19_ML")
 
 
 
