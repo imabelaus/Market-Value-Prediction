@@ -221,7 +221,7 @@ age_sd <- sd(FIFA19$Age)
 
 
 
-### 1. One out of 3 players is left footed
+#### 1. One out of 3 players is left footed
 
 ```table(FIFA19$Preferred.Foot)
 
@@ -233,7 +233,7 @@ right
 ###### Answer: 
 30 percent
 
-### 2. England is the country with most players in the game
+#### 2. England is the country with most players in the game
 
 ```most_nationalities <- summary(FIFA19$Nationality)
 head(most_nationalities, 10)
@@ -245,7 +245,7 @@ head(most_nationalities, 10)
 4. Argentina(937)
 5. France(914).
 
-### 3. Nationality with most players in the top 100
+#### 3. Nationality with most players in the top 100
 
 ```top_100 <- FIFA19[0:100,]
 nationalities_top_100 <- data.frame(table(top_100$Nationality))
@@ -255,7 +255,7 @@ head(top_100,10)
 ###### Answer: 
 Spain (14)
 
-### 4. Oldest player
+#### 4. Oldest player
 
 ```oldest_player <- FIFA19 %>%
   arrange(desc(Age))
@@ -265,7 +265,7 @@ head(oldest_player[,2:5],1)
 ###### Answer:
 Mexican goalkeeper Oscar Perez (45) 
 
-### 5. Best 10 under 21 players in the game
+#### 5. Best 10 under 21 players in the game
 
 ```young_beasts<-subset(FIFA19, FIFA19$Age < 21 & FIFA19$Overall>75)
 head(young_beasts[,2:5],10)
@@ -277,7 +277,7 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
-### 6. England's best rated player
+#### 6. England's best rated player
 
 ```eng<-subset(FIFA19, FIFA19$Nationality == "England" & FIFA19$Overall>80)
 head(eng[,2:5],5)
@@ -285,26 +285,26 @@ head(eng[,2:5],5)
 ###### Answer:
 Harry Kane (89)
 
-### 7. Average player age in the game
+#### 7. Average player age in the game
 
 ```mean(FIFA19$Age)```
 ###### Answer:
 25.12 years
 
-### 8. Total teams
+#### 8. Total teams
 
 ```length(unique(FIFA19$Club))```
 ###### Answer:
 652
 
-### 9. Best 3 Players
+#### 9. Best 3 Players
 
 ```head(FIFA19[,0:5],3)```
 ###### Answer:
 1. Lionel Messi (94), Cristiano Ronaldo (94)
 2. Neymar (92)
 
-### 10. 5 Players with most expectations (Overall- Potential)
+#### 10. 5 Players with most expectations (Overall- Potential)
 
 ```FIFA19$Potential.Gap <-  FIFA19$Potential - FIFA19$Overall
 
