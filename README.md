@@ -117,6 +117,8 @@ quantile(FIFA19$Overall)
   ggtitle("Player ratings Are Normally Distributed", subtitle = "The mean can be used as a measure of central tendancy")
 ```
 
+![Screen Shot 2019-11-05 at 16 06 50](https://user-images.githubusercontent.com/44293686/68247316-95aab900-ffe8-11e9-9c54-2879fb71132e.png)
+
 ```FIFA19 %>%
   ggplot(aes(x= Age)) +
   geom_histogram(color = "white", fill = "darkgrey") +
