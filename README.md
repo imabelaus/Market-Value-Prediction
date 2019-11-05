@@ -122,6 +122,8 @@ quantile(FIFA19$Overall)
   ggtitle("Player ages is not normally distributed", subtitle = "Left side distribution")
 ```
 
+![Screen Shot 2019-11-05 at 16 16 00](https://user-images.githubusercontent.com/44293686/68246873-b4f51680-ffe7-11e9-91bd-b2e9e47953a0.png)
+
 ```FIFA19 %>%
   group_by(Age) %>%
   summarise(Rating = mean(Overall)) %>%
