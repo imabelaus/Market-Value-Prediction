@@ -291,7 +291,22 @@ head(most_expectations[,2:8], 5)
 #     4. Manchester United Case Study    
 
 
+Context
 
+Let’s pretend we are part of the Manchester United recruitment team. For next season (2019-20) the team wants to sign players in order to compete for the Premier League title. There are four players that expire contract this season and need to be replaced:
+
+* Alexis Sánchez, right winger
+* Matteo Darmian, left back
+* Juan Mata, right midfielder
+* Ander Herrera, center midfielder
+
+Suppose the club wants to find one replacement for each of those four player, plus one central defender to make their defense stronger since last season they lacked of top defenders. 
+The last seven years have not being good in terms of performance for the team. Since Sir Alex Ferguson, former manager leaved Manchester United, the club has not made the best managing decisions. Now with a new manager called Ole Gunnar Solskjaer the club wants to return to the previous signing strategy which contemplates the following points:
+Sign players that are not at their peak level but they have potential to be elite players (like they did with Cristiano, Beckham or Diego Forlan).
+
+Young players than can be part of the team for at least 4 years in a great level (less than 27 years old).
+Avoid spending enormous amounts of money for one player, that may be too risky (there are many examples in the post Ferguson era like Angel di María or Radamel Falcao).
+Players that are talented today and don’t need more than one season to give great performances.
 
 ```Man U  (22-27) (more than 80 Overall) , not very valuable # big gap between potential and overall at a good price
 Ole Gunar Solksjaer```
