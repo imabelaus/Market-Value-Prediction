@@ -491,7 +491,43 @@ total_expenditure
 
 ---
 
-#     5. Predicting Market Value      
+#     5. Predicting Market Value  
+
+ 
+### Context
+
+Suppose Manchester United wanted to make a model to predict the market value of footballers in order to assign a market price to their own players and want to know the market value of players outside the club so that they make the best decisions in the next in the market windows.
+
+### Methodology
+**Target variable:**  Value (in million of dollars)
+**Type:** regression
+**Evaluation metric:** RMSE
+**Models deployed:** 
+* Linear Regression (4 models)
+* Stochastic Gradient Boosting (2 models)
+* eXtreme Gradient Boosting  (4 models)
+* Random Forest (2 models)
+* Support Vector Machines (1 model)
+
+### Data Pre Processing
+
+The following steps were made to the original dataset after cleaning the data. It is important to note that all models deployed only take numerical data.
+
+Data preprocessing steps
+
+I.	Dummification of the following variables:
+Position
+Prefered.Foot
+Work.Rate      
+II. 	Filtering to use only numerical data
+I decided to do this in order to speed the modelling process, this lets me experiment more with tuning parameters and feature selection.
+II. 	Drop near zero variance columns
+III. 	Data center and scale data
+IV.  Data imputation (mean imputation) 
+V. 	Reduce skewness (Box-Cox Transformation)
+
+At this stage I decided to create two datasets:
+
 
 #### Data Pre Processing
 
