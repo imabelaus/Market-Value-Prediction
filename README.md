@@ -26,7 +26,7 @@ View(FIFA19)
 load("FIFA19_ML")
 ```
 
-##### Downloading Libraries 
+Downloading Libraries 
 
 ```library(caret)
 library(DMwR)
@@ -39,7 +39,7 @@ library(ggpubr)
 library(xgboost)
 ```
 
-##### Inspecting the data
+Inspecting the data
 
 ```dim(FIFA19)
 names(FIFA19)
@@ -47,7 +47,7 @@ str(FIFA19)
 ```
 ![Screen Shot 2019-11-05 at 16 03 45](https://user-images.githubusercontent.com/44293686/68247002-ef5eb380-ffe7-11e9-9cd5-b2293e9190c1.png)
 
-##### Data Completeness
+Data Completeness
 
 ```total_na <- sum(is.na(FIFA19))
 total_data <- 18207 * 89 # dim 18207 X 89
@@ -55,7 +55,7 @@ percentage_na <- total_na/total_data
 percentage_na
 ```
 
-#####  Getting rid of unuseful variables
+Getting rid of unuseful variables
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
 * LS : RB
 
@@ -66,7 +66,7 @@ FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
 
-##### Removing unuseful monetary and quantitative characters:
+Removing unuseful monetary and quantitative characters:
 * "$"
 * "M"
 * "€"
@@ -92,7 +92,7 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 View(FIFA19)
 ```
 
-##### Transforming to numeric for further steps
+Transforming to numeric for further steps
 
 ```FIFA19$Release.Clause <- as.numeric(FIFA19$Release.Clause)
 FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
@@ -142,7 +142,7 @@ quantile(FIFA19$Overall)
 
 ![Screen Shot 2019-11-05 at 16 24 58](https://user-images.githubusercontent.com/44293686/68247460-e5898000-ffe8-11e9-8697-7a1a761c7108.png)
 
-##### Plotting the youngest teams
+Plotting the youngest teams
 
 
 ```age_avg <- mean(FIFA19$Age)
@@ -179,7 +179,7 @@ age_sd <- sd(FIFA19$Age)
  **Nordic Clubs Are Younger Than South American Clubs**
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
 
-##### Highest scores clubs
+Highest avarage rating players clubs
 
 ``` top_20_overall_clubs <- FIFA19 %>%
   group_by(Club) %>%
@@ -218,7 +218,8 @@ age_sd <- sd(FIFA19$Age)
   coord_flip() +
   theme(legend.position = "none")
   ```
-  **However If You Define Talent As Number Of Superstars**
+  **However other teams have more Superstars**
+  *(overall score > 85)
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
@@ -430,14 +431,9 @@ total_expenditure
 
 #     5. Predicting Market Value      
 
-
-
 #### Data Pre Processing
 
-
-
 * guide https://machinelearningmastery.com/pre-process-your-dataset-in-r/
-
 
 ##### Data preprocessing steps
 
@@ -470,7 +466,6 @@ There will be two datasets:
 
 ##### I. Near Zero Varince
 
-
 ```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
 
 dim(FIFA19)
@@ -482,15 +477,12 @@ FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Preferred.Foot, sep = "_"))
 FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Work.Rate, sep = "_"))
 ```
 
-
-
 ```names(FIFA19_1)
 
 dim(FIFA19_1)
 
 View(FIFA19_1)
 ```
-
 
 ```numeric_FIFA19 <- FIFA19_1[sapply(FIFA19_1,is.numeric)]
 
@@ -499,9 +491,7 @@ names(numeric_FIFA19)
 dim(numeric_FIFA19)
 ```
 
-
 ##### III. center and scale
-
 
 ```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
 FIFA19_transformed <- predict(preProc,numeric_FIFA19)
@@ -528,9 +518,7 @@ summary(FIFA19_transformed)
 
 ##### DATASET 1 -> NON CORRELATED VALUES
 
-
 ##### VI. remove high corr
-
 
 ```df2 = cor(FIFA19_transformed_1)
 hc = findCorrelation(df2, cutoff=0.75) # putt any value as a "cutoff" 
@@ -543,9 +531,7 @@ dim(FIFA19_transformed_1)
 ---
 
 ##### DATASET 2: PCA 
-
 *Note:(PCA does not discard correlated values) 
-
 
 ```pca_process = preProcess(FIFA19_transformed_1, method=c("pca"))
 print(pca_process)
@@ -557,11 +543,6 @@ dim(pca_data)
 ```#write.csv(model_data, "model_data.csv")
 #write.csv(pca_data, "pca_data.csv")
 ```
-
-
-
-####   Modelling
-
 
 
 ##### Remove Value + insert as non-scaled
@@ -597,6 +578,8 @@ summary(model1)
 ```
 
 --- 
+
+## Modelling
 
 ### Linear Regression Models
 
