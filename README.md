@@ -177,6 +177,8 @@ age_sd <- sd(FIFA19$Age)
   
   theme(legend.position = "none", axis.text.x = element_blank())
   ```
+ 
+ **Nordic Clubs Are Younger Than South American Clubs**
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
 
 ##### Highest scores clubs
@@ -199,6 +201,7 @@ age_sd <- sd(FIFA19$Age)
   coord_flip() +
   theme(legend.position = "none")
   ```
+  **Italian Teams Have The Highest Overall Ratings**
   ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
 
 ```FIFA19 %>%
@@ -217,7 +220,7 @@ age_sd <- sd(FIFA19$Age)
   coord_flip() +
   theme(legend.position = "none")
   ```
-  
+  **However If You Define Talent As Number Of Superstars**
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
@@ -228,7 +231,7 @@ age_sd <- sd(FIFA19$Age)
 
 
 
-#### 1. One out of 3 players is left footed
+#### 1. Left footed players
 
 ```table(FIFA19$Preferred.Foot)
 
@@ -242,7 +245,7 @@ right
 
 ___
 
-#### 2. England is the country with most players in the game
+#### 2. Country with most players in the game
 
 ```most_nationalities <- summary(FIFA19$Nationality)
 head(most_nationalities, 10)
@@ -455,6 +458,15 @@ total_expenditure
 3. Tranform to numeric values
 4. center scale, pca
 
+---
+There will be two datasets:
+
+1. Non PCA
+2. PCA
+
+---
+
+#### Dataset 1: Non PCA
 
 ```dim(FIFA19)```
 
@@ -480,11 +492,6 @@ dim(FIFA19_1)
 
 View(FIFA19_1)
 ```
-
-
-
-##### Model Pre processing   # we will only work with numeric values
-
 
 
 ```numeric_FIFA19 <- FIFA19_1[sapply(FIFA19_1,is.numeric)]
@@ -535,12 +542,12 @@ model_data = FIFA19_transformed_1[,-c(hc)]
 dim(model_data)
 dim(FIFA19_transformed_1)
 ```
+---
 
+##### DATASET 2: PCA 
 
-##### DATASET 2 --> PCA (does not discar correlated values) 
+*Note:(PCA does not discard correlated values) 
 
-
-##### Note that in PCA we do take higly correlated data
 
 ```pca_process = preProcess(FIFA19_transformed_1, method=c("pca"))
 print(pca_process)
@@ -552,8 +559,6 @@ dim(pca_data)
 ```#write.csv(model_data, "model_data.csv")
 #write.csv(pca_data, "pca_data.csv")
 ```
-
-
 
 
 
@@ -574,9 +579,6 @@ View(model_data_1)
 View(pca_data_1)
 ```
 
-
-
-
 ##### Predictor importance
 
 ```set.seed(7)
@@ -596,9 +598,9 @@ model1_results <- summary(model1)
 summary(model1)
 ```
 
+--- 
 
-
-##### Linear   Regression
+### Linear Regression Models
 
 
 ###### 1st Linear model (all features)
@@ -634,7 +636,7 @@ results_lm3_cv <- summary(lm3_cv)
 ###### Best MSE is 3.533
 
 
-###### with PCA
+###### with PCA 
 
 ```lm1_cv_PCA <- train(Value~., data = pca_data_1, method = "lm",
                 trControl = tc)
@@ -647,7 +649,7 @@ results_csv_PCA <- summary(lm1_cv_PCA)
 
 ###### RMSE 0.959 which is great!
 
-
+---
 
 ##### Stochastic Gradient Boosting with PCA
 
@@ -694,7 +696,7 @@ results_gbmFit2_pca
 ```
 ###### RMSE 0.98935
 
-
+---
 
 ###### eXtreme Gradient Boosting with PCA
 
@@ -779,10 +781,7 @@ xgbFit3_pca <- train(Value ~ ., data = pca_data_1,
 xgbFit3_pca_results <- xgbFit3_pca
 xgbFit3_pca_results
 ```
-
-
 ###### fourth model
-
 
 ```set.seed(7)
 
@@ -809,11 +808,9 @@ xgbFit4_pca_results <- xgbFit4_pca
 xgbFit4_pca_results
 ```
 
-
+---
 
 ###### Random   Forest   with   PCA
-
-
 
 ```set.seed(7)
 
@@ -835,7 +832,7 @@ rfFit_pca1_results <- rfFit_pca1
 rfFit_pca1_results
 ```
 
-###### second model
+###### (second model) Random   Forest   with   PCA
 
 
 ```set.seed(7)
@@ -857,53 +854,46 @@ rfFit_pca2_results <- rfFit_pca2
 rfFit_pca2_results
 ```
 
-
-##### SUPPORT   VECTOR    MACHINES    WITH    PCA 
-
+##### Support   Vector    Machines    with    PCA 
 
 ```svm_pca1 <- train(Value~., data=pca_data_1, method = "svmLinear", trControl = tc)
 
 svm_pca1_results <- svm_pca1
 
-
 svm_pca1_results
 ```
 ###### RMSE 1.01
 
+---
+
+##  Model Results
 
 
-
-
-######  M o d e l    r e s u l t s
-
-
-
-
-###### L i n e a r   R e g r e s s i o n
+###### Linear   Regression
 
 ```results_lm1_cv
 results_lm2_cv
 lm3_cv
 results_csv_PCA
 ```
-###### G B M
+###### GBM
 
 ```results_gbmFit1_pca
 results_gbmFit2_pca
 ```
-###### X G B
+###### XGB
 
 ```results_xgbFit1_pca
 xgbFit2_pca_results 
 xgbFit3_pca_results
 xgbFit4_pca_results
 ```
-###### R a n d o m  F o r e s t 
+###### Random Forest 
 
 ```rfFit_pca1_results
 rfFit_pca2_results
 ```
-###### S V M 
+###### SVM 
 
 ```svm_pca1_results```
 
