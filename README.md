@@ -945,18 +945,8 @@ rfFit_pca2_results
 |0.7217564       |      0.9835732  | 0.3410680  |
 
 
+### Interpretation
 
----
-
-
-
-###  Optimizing our model
+The best RMSE is 0.7217. This means that the model has an average error of $ 721,700 USD when estimating market value. This is a good model since some players can be worth up to $ 100 million USD and a mean of $ 5 million USD.
 
 
-Imputation: I decided to do a simple imputation method (mean) because only 0.001133037% of the values were null. It can be argued that more sophisticated algorithms could have been applied to fill the null values but I invested that time in experimenting with the modelling phase.
-
-**Categorical columns:** I got rid of two categorical columns which could have been very indicative but were not easy to dummify or treat (Club and Nationality). I did this because I thought I already had a lot of meaningful columns and I could spend more time experimenting with modelling. I am looking forward to treat categorical variables in a better way in next projects though.
-
-**Understanding tunegrids:** the way I achieved better performance in the models was by doing a baseline model and checked what tendencies the parameters showed without really understanding what the parameters meant. I am looking forward to study more in depth those parameters.
-
-Overall I wanted to make a project that was complete in the sense that I could show I have a data scientist toolset. This project has data inspections and cleaning, visualizations, data mining, data preprocessing, and machine learning. I am satisfied with the results of the models and I have some ideas as to how the results could improve (which I mention in the bullets above). 
