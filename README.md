@@ -616,12 +616,9 @@ summary(model1)
 *contains all features
 
 ```tc <- trainControl(method = "cv", number = 10)
-
-
 lm1_cv <- train(Value~., data = model_data_1, method = "lm",
                 trControl = tc)
 summary(lm1_cv)
-
 results_lm1_cv <- summary(lm1_cv)
 ```
 ##### (2nd model) Linear regression
