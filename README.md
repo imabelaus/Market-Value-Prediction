@@ -1,8 +1,9 @@
 
 ##            Imanol Belausteguigoitia Ibarrola
-##                    FIFA 19 
+##                    
 ![Screen Shot 2019-11-05 at 15 38 01](https://user-images.githubusercontent.com/44293686/68244446-d7386580-ffe2-11e9-8ad5-46c0f3d5cbd4.png)
-###      Exploratory Data Analysis and Predictive Modelling with FIFA19
+###      Exploratory Data Analysis and Predictive Modelling
+### FIFA19
 
 ## Introduction
 
