@@ -152,6 +152,12 @@ quantile(FIFA19$Overall)
 
 ![Screen Shot 2019-11-05 at 16 06 50](https://user-images.githubusercontent.com/44293686/68247316-95aab900-ffe8-11e9-9c54-2879fb71132e.png)
 
+* Summary statistics
+ | Min. | 1st Qu. | Median |   Mean | 3rd Qu. |   Max.| 
+ |:----:|:-------:|:------:|:------:|:-------:|:-----:|
+ |46.00 |  62.00  | 66.00  | 66.24  | 71.00   |  94.00|
+
+
 ```FIFA19 %>%
   ggplot(aes(x= Age)) +
   geom_histogram(color = "white", fill = "darkgrey") +
@@ -159,6 +165,12 @@ quantile(FIFA19$Overall)
 ```
 
 ![Screen Shot 2019-11-05 at 16 16 00](https://user-images.githubusercontent.com/44293686/68246873-b4f51680-ffe7-11e9-91bd-b2e9e47953a0.png)
+
+* Summary statistics
+| Min. | 1st Qu. | Median |   Mean | 3rd Qu. |   Max.| 
+|:----:|:-------:|:------:|:------:|:-------:|:-----:|
+|16.00 |  21.00  | 25.00  | 25.12  | 28.00   |  45.00|
+
 
 ```FIFA19 %>%
   group_by(Age) %>%
