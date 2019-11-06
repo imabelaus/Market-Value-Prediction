@@ -283,6 +283,7 @@ ___
 ```most_nationalities <- summary(FIFA19$Nationality)
 head(most_nationalities, 10)
 ```
+
 ###### Answer: 
 1. England (1662)
 2. Germany (1198)
@@ -290,6 +291,8 @@ head(most_nationalities, 10)
 4. Argentina(937)
 5. France(914).
 
+
+![Screen Shot 2019-11-06 at 15 54 13](https://user-images.githubusercontent.com/44293686/68337644-f13f7a00-00ae-11ea-8636-9ff4d172207a.png)
 ___
 
 #### 3. Nationality with most players in the top 100
@@ -302,6 +305,8 @@ head(top_100,10)
 ###### Answer: 
 Spain (14)
 
+![Screen Shot 2019-11-06 at 15 56 10](https://user-images.githubusercontent.com/44293686/68337615-e1c03100-00ae-11ea-9eed-cd3c0752e635.png)
+
 ___
 
 #### 4. Oldest player
@@ -313,6 +318,9 @@ head(oldest_player[,2:5],1)
 ```
 ###### Answer:
 Mexican goalkeeper Oscar Perez (45) 
+
+
+![Screen Shot 2019-11-06 at 15 54 40](https://user-images.githubusercontent.com/44293686/68337636-ee448980-00ae-11ea-8aa4-134bab085720.png)
 
 ___
 
@@ -328,6 +336,9 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
+
+![Screen Shot 2019-11-06 at 15 55 42](https://user-images.githubusercontent.com/44293686/68337629-e8e73f00-00ae-11ea-871a-900015a56fed.png)
+
 ___
 
 #### 6. England's best rated player
@@ -337,6 +348,8 @@ head(eng[,2:5],5)
 ```
 ###### Answer:
 Harry Kane (89)
+
+![Screen Shot 2019-11-06 at 15 57 08](https://user-images.githubusercontent.com/44293686/68337610-de2caa00-00ae-11ea-8b30-52d9f44d8e11.png)
 
 ___
 
@@ -362,6 +375,8 @@ ___
 ###### Answer:
 1. Lionel Messi (94), Cristiano Ronaldo (94)
 2. Neymar (92)
+
+![Screen Shot 2019-11-06 at 15 58 09](https://user-images.githubusercontent.com/44293686/68337592-d240e800-00ae-11ea-88f1-3908eb4c54cd.png)
 
 ___
 
