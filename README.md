@@ -106,7 +106,7 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 View(FIFA19)
 ```
 
-Transforming to numeric for further steps
+Transforming text variables to numeric
 
 ```FIFA19$Release.Clause <- as.numeric(FIFA19$Release.Clause)
 FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
