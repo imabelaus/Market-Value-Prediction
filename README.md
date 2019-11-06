@@ -142,7 +142,7 @@ quantile(FIFA19$Overall)
 
 ![Screen Shot 2019-11-05 at 16 24 58](https://user-images.githubusercontent.com/44293686/68247460-e5898000-ffe8-11e9-8697-7a1a761c7108.png)
 
-##### YOUNGEST TEAMS
+##### Plotting the youngest teams
 
 
 ```age_avg <- mean(FIFA19$Age)
