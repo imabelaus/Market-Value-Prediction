@@ -459,8 +459,7 @@ There will be two datasets:
 2. PCA
 
 ---
-
-#### Dataset 1: Non PCA
+#### Preprocessing Dataset 1 (Non PCA)
 
 ```dim(FIFA19)```
 
@@ -530,7 +529,7 @@ dim(FIFA19_transformed_1)
 ```
 ---
 
-##### DATASET 2: PCA 
+##### Preprocessing Dataset 2 (PCA) 
 *Note:(PCA does not discard correlated values) 
 
 ```pca_process = preProcess(FIFA19_transformed_1, method=c("pca"))
