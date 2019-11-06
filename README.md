@@ -615,6 +615,12 @@ summary(model1)
 
 ## Modelling
 
+### Training Control
+10 fold cross validation was applied to all models.
+Below is the formula used:
+
+```tc <- trainControl(method = "cv", number = 10)```
+
 ### Linear Regression Models
 
 
