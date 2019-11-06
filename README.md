@@ -15,7 +15,7 @@ The code was runned in R Studio, objective problem.
 
 1. Data Cleaning
 2. Exploratory Analysis 
-3. 10 Fun Facts 
+3. 10 facts about the FIFA 19 Complete Dataset 
 4. Data Mining: Manchester United Case Study
 5. Predicting Market Value
 
@@ -273,7 +273,7 @@ Highest avarage rating players clubs
 
 ---
 
-#     3.  Top 10 Fun Facts    
+#     3.  10 facts about the FIFA 19 Dataset    
 
 
 
