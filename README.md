@@ -55,7 +55,7 @@ percentage_na <- total_na/total_data
 percentage_na
 ```
 
-#####  Gettin rid of unuseful variables
+#####  Getting rid of unuseful variables
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
 * LS : RB
 
