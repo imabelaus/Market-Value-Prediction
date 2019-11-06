@@ -584,7 +584,8 @@ summary(model1)
 ### Linear Regression Models
 
 
-###### 1st Linear model (all features)
+##### (1st model) Linear regression
+*contains all features
 
 ```tc <- trainControl(method = "cv", number = 10)
 
@@ -595,7 +596,8 @@ summary(lm1_cv)
 
 results_lm1_cv <- summary(lm1_cv)
 ```
-###### 2nd model contains 20 relevant features (less than 0.001 p - value)
+##### (2nd model) Linear regression
+*contains 20 relevant features (less than 0.001 p - value)
 
 
 ```lm2_cv <- train(Value~Age+Potential+Wage+International.Reputation+Skill.Moves+Jersey.Number+Contract.Valid.Until+SprintSpeed+SprintSpeed+Reactions+Stamina+Strength+Composure+FIFA19_CAM+FIFA19_CB+FIFA19_CDM+FIFA19_CF+FIFA19_CM+FIFA19_LB+FIFA19_LCB, data = model_data_1, method = "lm",
@@ -604,7 +606,8 @@ results_lm1_cv <- summary(lm1_cv)
 results_lm2_cv <- summary(lm2_cv)
 ```
 
-###### 3rd model contains only 4 features that are really intuitive
+##### (3rd model) Linear regression
+*contains only 4 features that are really intuitive
 
 ```lm3_cv <- train(Value~Age+Potential+Wage+International.Reputation+Stamina, data = model_data_1, method = "lm",
                 trControl = tc)
@@ -617,7 +620,8 @@ results_lm3_cv <- summary(lm3_cv)
 ###### Best MSE is 3.533
 
 
-###### with PCA 
+##### (4th model) Linear regression
+*contains all features with PCA dataset
 
 ```lm1_cv_PCA <- train(Value~., data = pca_data_1, method = "lm",
                 trControl = tc)
@@ -632,7 +636,8 @@ results_csv_PCA <- summary(lm1_cv_PCA)
 
 ---
 
-##### Stochastic Gradient Boosting with PCA
+##### (1st) Stochastic Gradient Boosting 
+*with PCA dataset and all features
 
 
 ```set.seed(7)
@@ -655,6 +660,10 @@ results_gbmFit1_pca <- gbmFit1_pca
 results_gbmFit1_pca
 ```
 ###### RMSE of 1.11
+
+
+##### (2nd) Stochastic Gradient Boosting 
+*increasing number of trees from 100 to 300
 
 ```set.seed(7)
 
@@ -679,7 +688,7 @@ results_gbmFit2_pca
 
 ---
 
-###### eXtreme Gradient Boosting with PCA
+##### (1st model) eXtreme Gradient Boosting with PCA
 
 
 ```set.seed(7)
@@ -706,7 +715,6 @@ xgbFit1_pca <- train(Value ~ ., data = pca_data_1,
 results_xgbFit1_pca <- xgbFit1_pca
 ```
 
-###### clearly needs more trees
 
 
 ```set.seed(7)
@@ -735,7 +743,7 @@ xgbFit2_pca_results <- xgbFit2_pca
 xgbFit2_pca_results
 ```
 
-###### third model
+##### third model
 
 
 ```set.seed(7)
@@ -762,7 +770,7 @@ xgbFit3_pca <- train(Value ~ ., data = pca_data_1,
 xgbFit3_pca_results <- xgbFit3_pca
 xgbFit3_pca_results
 ```
-###### fourth model
+##### fourth model
 
 ```set.seed(7)
 
@@ -791,7 +799,7 @@ xgbFit4_pca_results
 
 ---
 
-###### Random   Forest   with   PCA
+##### Random   Forest   with   PCA
 
 ```set.seed(7)
 
@@ -813,7 +821,7 @@ rfFit_pca1_results <- rfFit_pca1
 rfFit_pca1_results
 ```
 
-###### (second model) Random   Forest   with   PCA
+##### (second model) Random   Forest   with   PCA
 
 
 ```set.seed(7)
