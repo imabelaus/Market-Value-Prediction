@@ -1,11 +1,14 @@
 
-###            Imanol Belausteguigoitia Ibarrola
+##            Imanol Belausteguigoitia Ibarrola
 ##                    FIFA 19 
 ![Screen Shot 2019-11-05 at 15 38 01](https://user-images.githubusercontent.com/44293686/68244446-d7386580-ffe2-11e9-8ad5-46c0f3d5cbd4.png)
-###      Exploratory Data Analysis and Predictive Modelling
+###      Exploratory Data Analysis and Predictive Modelling with FIFA19
 
 ## Introduction
-R Studio, value, objective problem.
+
+This document analyses the **complete FIFA 19 video game dataset**, which contains attributes for every player registered in the latest edition of FIFA 19 database. Exploratory analysis, data mining and modelling to predict the market value of footballers are contained in this work.
+
+The code was runned in R Studio, objective problem.
 
 ## Workflow
 
@@ -484,8 +487,11 @@ total_expenditure
 ---
 There will be two datasets:
 
-1. Non PCA
-2. PCA
+
+
+**1. Non PCA dataset(model_data.csv)** →  A dataset without highly correlated values (the threshold was 0.7 of correlation coefficient).  The dimension is of 59 columns and 18207 observations.
+**2. PCA dataset	(pca_data.csv)**  → The dimension is of 47 columns and 18207 observations.
+
 
 ---
 #### Preprocessing Dataset 1 (Non PCA)
