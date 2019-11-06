@@ -500,14 +500,19 @@ Suppose Manchester United wanted to make a model to predict the market value of 
 
 ### Methodology
 **Target variable:**  Value (in million of dollars)
+
 **Type:** regression
+
 **Evaluation metric:** RMSE
+
 **Models deployed:** 
+
 * Linear Regression (4 models)
 * Stochastic Gradient Boosting (2 models)
 * eXtreme Gradient Boosting  (4 models)
 * Random Forest (2 models)
 * Support Vector Machines (1 model)
+* **TOTAL**: 13
 
 ### Data Pre Processing
 
