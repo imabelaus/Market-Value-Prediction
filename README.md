@@ -68,11 +68,14 @@ FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
 
-##### Removing unuseful monetary and quantitative characters
+##### Removing unuseful monetary and quantitative characters:
 * "$"
 * "M"
 * "€"
 * "K"
+* lbs
+* .
+* ,
 
 
 ```FIFA19[,'Value'] <- gsub("€","",FIFA19[,'Value'])
