@@ -47,8 +47,6 @@ str(FIFA19)
 ```
 ![Screen Shot 2019-11-05 at 16 03 45](https://user-images.githubusercontent.com/44293686/68247002-ef5eb380-ffe7-11e9-9cd5-b2293e9190c1.png)
 
-##### Checking how complete is the data
-
 ##### Data Completeness
 
 ```total_na <- sum(is.na(FIFA19))
