@@ -10,6 +10,8 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 
 The code was runned in R Studio, objective problem.
 
+### Objective
+
 ## Workflow
 
 1. Data Cleaning
