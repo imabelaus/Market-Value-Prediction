@@ -73,9 +73,9 @@ FIFA19[,29:54] <- NULL
 * "M"
 * "€"
 * "K"
-* lbs
-* .
-* ,
+* "lbs"
+* "."
+* ","
 
 
 ```FIFA19[,'Value'] <- gsub("€","",FIFA19[,'Value'])
