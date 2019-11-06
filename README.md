@@ -47,13 +47,28 @@ str(FIFA19)
 ```
 ![Screen Shot 2019-11-05 at 16 03 45](https://user-images.githubusercontent.com/44293686/68247002-ef5eb380-ffe7-11e9-9cd5-b2293e9190c1.png)
 
-Data Completeness
+#### Dimension
+
+* 18207  observations  
+* 89 columns
+
+
+#### Variables
+* There is a total of 87 (ID and index are not included):
+
+Age, Nationality, Overall, Potential, Club, Value, Wage, Preferred Foot, International Reputation, Weak Foot, Skill Moves, Work Rate, Position, Jersey Number, Joined, Loaned From, Contract Valid Until, Height, Weight, LS, ST, RS, LW, LF, CF, RF, RW, LAM, CAM, RAM, LM, LCM, CM, RCM, RM, LWB, LDM, CDM, RDM, RWB, LB, LCB, CB, RCB, RB, Crossing, Finishing, Heading, Accuracy, ShortPassing, Volleys, Dribbling, Curve, FKAccuracy, LongPassing, BallControl, Acceleration, SprintSpeed, Agility, Reactions, Balance, ShotPower, Jumping, Stamina, Strength, LongShots, Aggression, Interceptions, Positioning, Vision, Penalties, Composure, Marking, StandingTackle, SlidingTackle, GKDiving, GKHandling, GKKicking, GKPositioning, GKReflexes, and Release Clause.
+
+
+#### Data Completeness
 
 ```total_na <- sum(is.na(FIFA19))
 total_data <- 18207 * 89 # dim 18207 X 89
 percentage_na <- total_na/total_data                
 percentage_na
 ```
+
+###### Percentage of null values
+* 0.001133037% 
 
 Getting rid of unuseful variables
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
@@ -99,6 +114,16 @@ FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
 FIFA19$Wage <- as.numeric(FIFA19$Wage)
 FIFA19$Value <- as.numeric(FIFA19$Value)
 ```
+#### Modified columns
+
+5 columns were modifies for technical purposes:
+* Value (1), Wage (2), Release.Clause (3) → This variables contained money signs such as “$”,  “€”, “K”, or “M” that had to be removed to be analyzed statistically. 
+*Weight (4), Height (5)  → this two features contained characters such as “lbs” that had to be removed in order to run algorithms.
+
+#### New column
+
+Potential Gap: This is the difference between Potential and Overall. This will be used to predict market value and will be used for footballer signing decisions in the next sections.
+
 
 ---
 
@@ -178,6 +203,11 @@ age_sd <- sd(FIFA19$Age)
  
  **Nordic Clubs Are Younger Than South American Clubs**
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
+
+* Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs.
+
+* Nordic countries don’t have a big budget to retain young players, as soon as they prove to be talented they are likely to sign with another club.
+
 
 Highest avarage rating players clubs
 
