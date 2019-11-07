@@ -579,6 +579,7 @@ There will be two datasets:
 
 
 **1. Non PCA dataset(model_data.csv)** →  A dataset without highly correlated values (the threshold was 0.7 of correlation coefficient).  The dimension is of 59 columns and 18207 observations.
+
 **2. PCA dataset	(pca_data.csv)**  → The dimension is of 47 columns and 18207 observations.
 
 
