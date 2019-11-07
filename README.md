@@ -551,29 +551,12 @@ III. 	Data center and scale data
 IV.  Data imputation (mean imputation) 
 V. 	Reduce skewness (Box-Cox Transformation)
 
-At this stage I decided to create two datasets:
 
 
 #### Data Pre Processing
 
 * guide https://machinelearningmastery.com/pre-process-your-dataset-in-r/
 
-##### Data preprocessing steps
-
-1. Near Zero Variance 
-2. Dummification
-3. Data center and scale
-4. Data normalization
-5. The Box-Cox Transform
-6. cutoff correlation
-7. only numerics
-
-##### Data preprocessing steps with PCA
-
-1. Dummification
-2. Near Zero Variance
-3. Tranform to numeric values
-4. center scale, pca
 
 ---
 There will be two datasets:
