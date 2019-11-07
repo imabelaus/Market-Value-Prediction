@@ -458,11 +458,14 @@ Players that are talented today and don’t need more than one season to give gr
 ###  Approach
 
 We will make a subset of players from the whole dataset that have the following characteristics:
-* FIFA19$Age < 27:  Players with less than 27 years old.
-* FIFA19$Overall>80:  Player with high levels of talent.
-* FIFA19$Potential.Gap > 0: Players that are expected to improve in the following years.
-* FIFA19$Value < 80:  The maximum price they will pay is $ 80 million USD to contract them.
-* FIFA19$Release.Clause < 80:  The club wont sign footballers with high release clauses, the threshold selected is $ 80 million USD.
+
+|Function| Interpretation |
+|:------:|:---------------:|
+| FIFA19$Age < 27|  Players with less than 27 years old|
+| FIFA19$Overall>80|  Player with high levels of talent|
+| FIFA19$Potential.Gap > 0| Players that are expected to improve in the following years|
+| FIFA19$Value < 80|  The maximum price they will pay is $ 80 million USD to contract them|
+| FIFA19$Release.Clause < 80|  The club wont sign footballers with high release clauses, the threshold selected is $ 80 million USD|
 	
 **There is a pool of 123 players** that have all the conditions above. Now that we have that pool, we **find players that have the same position as the players we want to replace**. **The players with the highest “Overall”** score and that have the same positions as the players leaving the club (plus a centre back) are the ones that will be signed. 
 
