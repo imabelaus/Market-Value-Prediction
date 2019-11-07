@@ -164,7 +164,7 @@ Player ratings are normally distributed
   geom_histogram(color = "white", fill = "darkgrey") +
   ggtitle("Player ages is not normally distributed", subtitle = "Left side distribution")
 ```
-**Ages**
+### Ages
 Player ages **are not** normally distributed.
 
 ![Screen Shot 2019-11-05 at 16 16 00](https://user-images.githubusercontent.com/44293686/68246873-b4f51680-ffe7-11e9-91bd-b2e9e47953a0.png)
@@ -183,7 +183,7 @@ Player ages **are not** normally distributed.
   geom_line(color = "grey50", size = 1) +
   ggtitle("The Age Curve Flattens Off", subtitle = "Player ratings tend not to get better after the age of 30")
 ```
-**Rating vs Age**
+### Rating vs Age
 Players reach their peak level at low thirties and then decline.
 
 
@@ -222,7 +222,7 @@ age_sd <- sd(FIFA19$Age)
   
   theme(legend.position = "none", axis.text.x = element_blank())
   ```
- **Oldest vs Youngest Teams**
+ ### Oldest vs Youngest Teams
  Nordic Clubs Are Younger Than South American Clubs
  ###### (oldest in purple and youngest in green)
 
@@ -275,7 +275,7 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
-  **Italian teams (purple) have the highest overall ratings** 
+  ### Italian teams (purple) have the highest overall ratings
   
   ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
   
@@ -298,7 +298,7 @@ The average overall rating of the 20 highest rated teams in descending order.
   theme(legend.position = "none")
   ```
   Italian teams have the best overall average:
-  **However other teams have more Superstars**
+  ### However other teams have more Superstars
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
