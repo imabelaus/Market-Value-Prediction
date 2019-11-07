@@ -30,7 +30,7 @@ FIFA19 <- read.csv("FIFA19.csv")
 load("FIFA19_ML")
 ```
 
-Downloading Libraries 
+#### Downloading Libraries 
 
 ```library(caret)
 library(DMwR)
@@ -86,7 +86,7 @@ FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
 
-Removing unuseful monetary and quantitative characters:
+#### Removing unuseful monetary and quantitative characters
 * "$"
 * "M"
 * "€"
@@ -112,7 +112,7 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 View(FIFA19)
 ```
 
-Transforming text variables to numeric
+#### Transforming text variables to numeric
 
 ```FIFA19$Release.Clause <- as.numeric(FIFA19$Release.Clause)
 FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
