@@ -217,6 +217,11 @@ age_sd <- sd(FIFA19$Age)
   
   theme(legend.position = "none", axis.text.x = element_blank())
   ```
+ 
+ **Nordic Clubs Are Younger Than South American Clubs**
+![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
+
+
  **Oldest Clubs**
  
 | Club        | Average Age  | Country   |         
@@ -237,9 +242,6 @@ age_sd <- sd(FIFA19$Age)
 |Bohemian FC           | 21.5         |  Ireland     |
 |FC Groningen          | 21.4         |  Netherlands |
 |FC Nordsjaelland      | 20.3         |  New Zealand |
- 
- **Nordic Clubs Are Younger Than South American Clubs**
-![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
 
 * Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs.
 
