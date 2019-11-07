@@ -217,6 +217,26 @@ age_sd <- sd(FIFA19$Age)
   
   theme(legend.position = "none", axis.text.x = element_blank())
   ```
+ **Oldest Clubs**
+ 
+| Club        | Average Age  | Country   |         
+|:-----------:|:------------:| :--------:| 
+|Paraná       | 31.6         | Brazil    |
+|Cruzeiro     | 30.6         | Brazil    |
+|Chapecoense  | 30.4         | Brazil    |
+|Botafogo     | 30.4         | Brazil    |
+|Paranaense   | 30.4         | Brazil    |
+
+**Youngest Clubs**
+
+
+| Club                 | Average Age  | Country      |         
+|:--------------------:|:------------:| :-----------:| 
+|FC Admira Wacker      | 21.9         |    Austria   |
+|Sochaux-Montebéliard  | 21.7         |   France     |
+|Bohemian FC           | 21.5         |  Ireland     |
+|FC Groningen          | 21.4         |  Netherlands |
+|FC Nordsjaelland      | 20.3         |  New Zealand |
  
  **Nordic Clubs Are Younger Than South American Clubs**
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
