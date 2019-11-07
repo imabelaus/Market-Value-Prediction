@@ -547,7 +547,7 @@ Suppose Manchester United wanted to make a model to predict the market value of 
 * eXtreme Gradient Boosting  (4 models)
 * Random Forest (2 models)
 * Support Vector Machines (1 model)
-* **TOTAL**: 13
+* **TOTAL MODELS**: 13
 
 ### Data Pre Processing
 
