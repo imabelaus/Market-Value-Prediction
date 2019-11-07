@@ -122,7 +122,9 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 #### New column
 
-**Potential Gap:** This is the difference between Potential and Overall. This will be used to predict market value and will be used for footballer signing decisions in the next sections.
+**Potential Gap:** This is the difference between Potential and Overall. 
+
+This will be used to predict market value and will be used for footballer signing decisions in the next sections.
 
 
 ---
@@ -483,37 +485,60 @@ We will make a subset of players from the whole dataset that have the following 
 
 The code lines are below:
 
+Dimension of players that fulfill conditions:
 
 ```posible_man_united <- subset(FIFA19, FIFA19$Age < 27 & FIFA19$Overall>80 & FIFA19$Potential.Gap > 0 & FIFA19$Value < 80 & FIFA19$Release.Clause < 80)
+dim(posible_man_united)
 ```
-```dim(posible_man_united)```
+###### Result: 123
 
+Alexis Sánchez's replacement
 
 ```sanchez_replacement <- subset(posible_man_united, Position =="RW")
 dim(sanchez_replacement)
 head(sanchez_replacement[,2:8],5)
 new_sanchez <- subset(head(sanchez_replacement[,2:8],1))
 ```
+###### Player:  
+
+Juan Mata's replacement 
+
 ```mata_replacement <- subset(posible_man_united, Position =="RM")
 dim(mata_replacement)
 head(mata_replacement[,2:8],5)
 new_mata <-subset(head(mata_replacement[,2:8],1))
 ```
+###### Player:
+
+Ander Herrera's replacement
+
 ```herrera_replacement <- subset(posible_man_united, Position =="CM")
 dim(herrera_replacement)
 head(herrera_replacement[,2:8],5)
 new_herrera <- subset(head(herrera_replacement[,2:8],1))
 ```
+###### Player:
+
+
+New centreback
+
 ```new_centerback <- subset(posible_man_united, Position =="CB")
 dim(new_centerback)
 head(new_centerback[,2:8],5)
 new_1_centerback <- subset(head(new_centerback[,2:8],1))
 ```
+###### Player:
+
+Matteo Darmian's replacement
+
 ```darmian_replacement <- subset(posible_man_united, Position =="LB")
 dim(darmian_replacement)
 head(darmian_replacement[,2:8],5)
 new_darmian <- subset(head(darmian_replacement[,2:8],1))
 ```
+###### Player:
+
+Getting a table of Man U's new signings.
 
 ```man_u_new_signings <- rbind(new_sanchez, new_mata, new_herrera, new_1_centerback, new_darmian)
 man_u_new_signings
