@@ -243,9 +243,7 @@ age_sd <- sd(FIFA19$Age)
 |FC Groningen          | 21.4         |  Netherlands |
 |FC Nordsjaelland      | 20.3         |  New Zealand |
 
-* Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs.
-
-* Nordic countries don’t have a big budget to retain young players, as soon as they prove to be talented they are likely to sign with another club.
+* Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs. 
 
 
 Highest avarage rating players clubs
