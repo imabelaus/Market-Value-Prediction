@@ -83,7 +83,7 @@ FIFA19[,"ID"] <- NULL
 FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
-**Eliminated columns:**
+###### Eliminated columns:
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
 * LS : RB
 
@@ -105,7 +105,7 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 
 View(FIFA19)
 ```
-**Eliminated signs:**
+###### Eliminated signs:
 * "$"
 * "M"
 * "€"
@@ -133,7 +133,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 * **Potential Gap:** This is the difference between Potential and Overall. 
 
-This will be used to predict market value and will be used for footballer signing decisions in the next sections.
+(This will be used to predict market value and will be used for footballer signing decisions in the next sections.)
 
 
 ---
