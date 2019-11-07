@@ -295,7 +295,7 @@ The average overall rating of the 20 highest rated teams in descending order.
   
   ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
   
- **Which teams have the most superstars?** Let's define that top player has to have an 85 or more score Overall. 
+ **Which teams have the most superstars?**  
 
 ```FIFA19 %>%
   mutate(ElitePlayers = ifelse(Overall >= 85, "Elite", "Not Elite")) %>%
@@ -313,6 +313,9 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
+  Let's define that top player has to have an 85 or more score Overall.
+  ![Screen Shot 2019-11-07 at 17 51 09](https://user-images.githubusercontent.com/44293686/68434586-5797cb80-0187-11ea-968f-455b8815b25d.png)
+  
   ### However other teams have more Superstars
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
