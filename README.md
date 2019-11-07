@@ -472,9 +472,6 @@ We will make a subset of players from the whole dataset that have the following 
 The code lines are below:
 
 
-```Man U  (22-27) (more than 80 Overall) , not very valuable # big gap between potential and overall at a good price
-```
-
 ```posible_man_united <- subset(FIFA19, FIFA19$Age < 27 & FIFA19$Overall>80 & FIFA19$Potential.Gap > 0 & FIFA19$Value < 80 & FIFA19$Release.Clause < 80)
 ```
 ```dim(posible_man_united)```
