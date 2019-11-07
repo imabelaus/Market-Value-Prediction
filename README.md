@@ -455,6 +455,20 @@ Young players than can be part of the team for at least 4 years in a great level
 Avoid spending enormous amounts of money for one player, that may be too risky (there are many examples in the post Ferguson era like Angel di María or Radamel Falcao).
 Players that are talented today and don’t need more than one season to give great performances.
 
+###  Approach
+
+We will make a subset of players from the whole dataset that have the following characteristics:
+* FIFA19$Age < 27:  Players with less than 27 years old.
+* FIFA19$Overall>80:  Player with high levels of talent.
+* FIFA19$Potential.Gap > 0: Players that are expected to improve in the following years.
+* FIFA19$Value < 80:  The maximum price they will pay is $ 80 million USD to contract them.
+* FIFA19$Release.Clause < 80:  The club wont sign footballers with high release clauses, the threshold selected is $ 80 million USD.
+	
+**There is a pool of 123 players** that have all the conditions above. Now that we have that pool, we **find players that have the same position as the players we want to replace**. **The players with the highest “Overall”** score and that have the same positions as the players leaving the club (plus a centre back) are the ones that will be signed. 
+
+The code lines are below:
+
+
 ```Man U  (22-27) (more than 80 Overall) , not very valuable # big gap between potential and overall at a good price
 ```
 
@@ -492,6 +506,7 @@ new_darmian <- subset(head(darmian_replacement[,2:8],1))
 ```man_u_new_signings <- rbind(new_sanchez, new_mata, new_herrera, new_1_centerback, new_darmian)
 man_u_new_signings
 ```
+### Manchester United's new signings (2018-2019) 
 
 | Rank   | Name      | Age  | Nationality   | Overall       | Potential  | Club             | Value  |
 | :----: |:---------:| :---:| :-----------: |:-------------:| :---------:| :---------------:| :-----:|
