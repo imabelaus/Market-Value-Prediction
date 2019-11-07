@@ -313,7 +313,6 @@ The average overall rating of the 20 highest rated teams in descending order.
 #### 1. Left footed players
 
 ```table(FIFA19$Preferred.Foot)
-
 left <- 4211/13948
 left
 right <- 1-left
