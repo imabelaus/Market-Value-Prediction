@@ -73,7 +73,7 @@ total_data <- 18207 * 89 # dim 18207 X 89
 percentage_na <- total_na/total_data                
 percentage_na
 ```
-Percentage of null values: 0.001133037% 
+* Percentage of null values: 0.001133037% 
 
 Getting rid of unuseful variables
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
