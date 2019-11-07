@@ -76,8 +76,6 @@ percentage_na
 * Percentage of null values: 0.001133037% 
 
 #### Getting rid of unuseful variables
-* Photo, Flag, ID, CLUB LOGO, REAL FACE
-* LS : RB
 
 ```FIFA19[,"Photo"] <- NULL
 FIFA19[,"Flag"] <- NULL
@@ -85,15 +83,11 @@ FIFA19[,"ID"] <- NULL
 FIFA19[,"Club.Logo"] <- NULL
 FIFA19[,29:54] <- NULL
 ```
+**Eliminated columns:**
+* Photo, Flag, ID, CLUB LOGO, REAL FACE
+* LS : RB
 
 #### Removing unuseful monetary and quantitative characters
-* "$"
-* "M"
-* "€"
-* "K"
-* "lbs"
-* "."
-* ","
 
 
 ```FIFA19[,'Value'] <- gsub("€","",FIFA19[,'Value'])
@@ -111,6 +105,16 @@ FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
 
 View(FIFA19)
 ```
+**Eliminated signs:**
+* "$"
+* "M"
+* "€"
+* "K"
+* "lbs"
+* "."
+* ","
+
+
 
 #### Transforming text variables to numeric
 
