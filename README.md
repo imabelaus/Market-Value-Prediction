@@ -313,7 +313,9 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
-  Let's define that top player has to have an 85 or more score Overall.
+  Let's define that top player has to have an 85 or more score Overall. Just like the players below...
+  
+  
   ![Screen Shot 2019-11-07 at 17 51 09](https://user-images.githubusercontent.com/44293686/68434586-5797cb80-0187-11ea-968f-455b8815b25d.png)
   
   ### However other teams have more Superstars
