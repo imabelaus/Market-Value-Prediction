@@ -136,6 +136,11 @@ This will be used to predict market value and will be used for footballer signin
 
 #     2.  Exploratory Analysis     
 
+Intro blah blah blah
+
+graphs
+
+
 
 ```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
 mean(FIFA19$Release.Clause, na.rm =TRUE)
