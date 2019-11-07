@@ -590,7 +590,7 @@ total_expenditure
 Suppose Manchester United wanted to make a model to predict the market value of footballers in order to assign a market price to their own players and want to know the market value of players outside the club so that they make the best decisions in the next in the market windows.
 
 ### Methodology
-**Target variable:**  Value (in million of dollars)
+**Target variable:**  market value (in millions of dollars)
 
 **Type:** regression
 
