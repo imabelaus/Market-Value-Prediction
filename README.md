@@ -117,8 +117,8 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 #### Modified columns
 
 5 columns were modifies for technical purposes:
-* Value (1), Wage (2), Release.Clause (3) → This variables contained money signs such as “$”,  “€”, “K”, or “M” that had to be removed to be analyzed statistically. 
-* Weight (4), Height (5)  → this two features contained characters such as “lbs” that had to be removed in order to run algorithms.
+* **Value (1), Wage (2), Release.Clause (3)** → This variables contained money signs such as “$”,  “€”, “K”, or “M” that had to be removed to be analyzed statistically. 
+* **Weight (4), Height (5)**  → this two features contained characters such as “lbs” that had to be removed in order to run algorithms.
 
 #### New column
 
@@ -147,7 +147,7 @@ quantile(FIFA19$Overall)
   ggtitle("Player ratings Are Normally Distributed", subtitle = "The mean can be used as a measure of central tendancy")
 ```
 
-**Overall**
+### Overall
 Player ratings are normally distributed
 
 ![Screen Shot 2019-11-05 at 16 06 50](https://user-images.githubusercontent.com/44293686/68247316-95aab900-ffe8-11e9-9c54-2879fb71132e.png)
@@ -224,7 +224,6 @@ age_sd <- sd(FIFA19$Age)
   ```
  ### Oldest vs Youngest Teams
  Nordic Clubs Are Younger Than South American Clubs
- ###### (oldest in purple and youngest in green)
 
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
 
@@ -297,7 +296,6 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
-  Italian teams have the best overall average:
   ### However other teams have more Superstars
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
