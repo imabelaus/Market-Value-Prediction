@@ -318,7 +318,7 @@ The average overall rating of the 20 highest rated teams in descending order.
   
   ![Screen Shot 2019-11-07 at 17 51 09](https://user-images.githubusercontent.com/44293686/68434586-5797cb80-0187-11ea-968f-455b8815b25d.png)
   
-  ### However other teams have more Superstars
+  ### Explain blah blahh
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
