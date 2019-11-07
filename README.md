@@ -51,11 +51,16 @@ library(xgboost)
 
 #### Dimension
 
+```dim(FIFA19)```
+
 * 18207  observations  
 * 89 columns
 
 
 #### Variables
+
+```names(FIFA19)```
+
 * There is a total of 87:
 
 **Age, Nationality, Overall, Potential, Club, Value, Wage, Preferred Foot, International Reputation, Weak Foot, Skill Moves, Work Rate, Position, Jersey Number, Joined, Loaned From, Contract Valid Until, Height, Weight, LS, ST, RS, LW, LF, CF, RF, RW, LAM, CAM, RAM, LM, LCM, CM, RCM, RM, LWB, LDM, CDM, RDM, RWB, LB, LCB, CB, RCB, RB, Crossing, Finishing, Heading, Accuracy, ShortPassing, Volleys, Dribbling, Curve, FKAccuracy, LongPassing, BallControl, Acceleration, SprintSpeed, Agility, Reactions, Balance, ShotPower, Jumping, Stamina, Strength, LongShots, Aggression, Interceptions, Positioning, Vision, Penalties, Composure, Marking, StandingTackle, SlidingTackle, GKDiving, GKHandling, GKKicking, GKPositioning, GKReflexes, and Release Clause.**
@@ -639,9 +644,6 @@ FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Work.Rate, sep = "_"))
 ```
 
 ```names(FIFA19_1)
-
-dim(FIFA19_1)
-
 View(FIFA19_1)
 ```
 
