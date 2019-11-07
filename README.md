@@ -121,7 +121,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 5 columns were modifies for technical purposes:
 * Value (1), Wage (2), Release.Clause (3) → This variables contained money signs such as “$”,  “€”, “K”, or “M” that had to be removed to be analyzed statistically. 
-*Weight (4), Height (5)  → this two features contained characters such as “lbs” that had to be removed in order to run algorithms.
+* Weight (4), Height (5)  → this two features contained characters such as “lbs” that had to be removed in order to run algorithms.
 
 #### New column
 
@@ -150,6 +150,9 @@ quantile(FIFA19$Overall)
   ggtitle("Player ratings Are Normally Distributed", subtitle = "The mean can be used as a measure of central tendancy")
 ```
 
+**Overall**
+Player ratings are normally distributed
+
 ![Screen Shot 2019-11-05 at 16 06 50](https://user-images.githubusercontent.com/44293686/68247316-95aab900-ffe8-11e9-9c54-2879fb71132e.png)
 
 **Summary statistics**
@@ -164,6 +167,8 @@ quantile(FIFA19$Overall)
   geom_histogram(color = "white", fill = "darkgrey") +
   ggtitle("Player ages is not normally distributed", subtitle = "Left side distribution")
 ```
+**Ages**
+Player ages **are not** normally distributed.
 
 ![Screen Shot 2019-11-05 at 16 16 00](https://user-images.githubusercontent.com/44293686/68246873-b4f51680-ffe7-11e9-91bd-b2e9e47953a0.png)
 
@@ -181,6 +186,9 @@ quantile(FIFA19$Overall)
   geom_line(color = "grey50", size = 1) +
   ggtitle("The Age Curve Flattens Off", subtitle = "Player ratings tend not to get better after the age of 30")
 ```
+**Rating vs Age**
+Players reach their peak level at low thirties and then decline.
+
 
 ![Screen Shot 2019-11-05 at 16 24 58](https://user-images.githubusercontent.com/44293686/68247460-e5898000-ffe8-11e9-8697-7a1a761c7108.png)
 
@@ -217,8 +225,10 @@ age_sd <- sd(FIFA19$Age)
   
   theme(legend.position = "none", axis.text.x = element_blank())
   ```
- 
- **Nordic Clubs Are Younger Than South American Clubs**
+ **Oldest vs Youngest Teams**
+ Nordic Clubs Are Younger Than South American Clubs
+ ###### (oldest in purple and youngest in green)
+
 ![Screen Shot 2019-11-05 at 16 27 30](https://user-images.githubusercontent.com/44293686/68247647-4749ea00-ffe9-11e9-999b-712af86bdfc8.png)
 
 
@@ -245,8 +255,10 @@ age_sd <- sd(FIFA19$Age)
 
 * Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs. 
 
+* Young average age teams tend not to have a large budget to spend on mature players and as soon as their players gain experience they are sold to bigger clubs. 
 
-Highest avarage rating players clubs
+
+The average overall rating of the 20 highest rated teams in descending order.
 
 ``` top_20_overall_clubs <- FIFA19 %>%
   group_by(Club) %>%
@@ -266,7 +278,8 @@ Highest avarage rating players clubs
   coord_flip() +
   theme(legend.position = "none")
   ```
-  **Italian Teams Have The Highest Overall Ratings**
+  **Italian teams (purple) have the highest overall ratings
+  
   ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
 
 ```FIFA19 %>%
@@ -286,7 +299,7 @@ Highest avarage rating players clubs
   theme(legend.position = "none")
   ```
   **However other teams have more Superstars**
-  *(overall score > 85)
+  * (overall score > 85)
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
