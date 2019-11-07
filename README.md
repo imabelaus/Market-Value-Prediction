@@ -251,6 +251,7 @@ age_sd <- sd(FIFA19$Age)
 |FC Groningen          | 21.4         |  Netherlands |
 |FC Nordsjaelland      | 20.3         |  New Zealand |
 
+
 * Brazilian players tend to retire in Brazil after long careers in Europe, that fact is key to understand the extreme above average age for some of the clubs. 
 
 * Young average age teams tend not to have a large budget to spend on mature players and as soon as their players gain experience they are sold to bigger clubs. 
