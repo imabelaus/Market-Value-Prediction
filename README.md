@@ -27,7 +27,6 @@ Setting working directory, libraries and loading data
 
 ```setwd("~/Downloads/")
 FIFA19 <- read.csv("FIFA19.csv")
-View(FIFA19)
 load("FIFA19_ML")
 ```
 
@@ -46,10 +45,9 @@ library(xgboost)
 
 Inspecting the data
 
-```dim(FIFA19)
-names(FIFA19)
-str(FIFA19)
+```View(FIFA19)
 ```
+#### Our dataset 
 ![Screen Shot 2019-11-05 at 16 03 45](https://user-images.githubusercontent.com/44293686/68247002-ef5eb380-ffe7-11e9-9cd5-b2293e9190c1.png)
 
 #### Dimension
@@ -278,9 +276,11 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
-  **Italian teams (purple) have the highest overall ratings
+  **Italian teams (purple) have the highest overall ratings** 
   
   ![Screen Shot 2019-11-05 at 16 29 31](https://user-images.githubusercontent.com/44293686/68247871-b3c4e900-ffe9-11e9-8c1a-4382f34fe51e.png)
+  
+ Which teams have the most superstars? Let's define that top player has to have an 85 or more score Overall. 
 
 ```FIFA19 %>%
   mutate(ElitePlayers = ifelse(Overall >= 85, "Elite", "Not Elite")) %>%
@@ -298,8 +298,8 @@ The average overall rating of the 20 highest rated teams in descending order.
   coord_flip() +
   theme(legend.position = "none")
   ```
+  Italian teams have the best overall average:
   **However other teams have more Superstars**
-  * (overall score > 85)
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
