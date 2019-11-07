@@ -1088,6 +1088,6 @@ rfFit_pca2_results
 
 ### Interpretation
 
-The best RMSE is 0.7217. This means that the model has an average error of $ 721,700 USD when estimating market value. This is a good model since some players can be worth up to $ 100 million USD and a mean of $ 5 million USD.
+The best **RMSE is 0.7217**. This means that the model has an **average error of $ 721,700 USD** when estimating market value. This is a good model since some players can be worth up to $ 100 million USD, while the average player is worth $ 5 million USD.
 
 
