@@ -127,7 +127,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 #### New column
 
-**Potential Gap:** This is the difference between Potential and Overall. 
+* **Potential Gap:** This is the difference between Potential and Overall. 
 
 This will be used to predict market value and will be used for footballer signing decisions in the next sections.
 
