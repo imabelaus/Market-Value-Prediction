@@ -75,7 +75,7 @@ percentage_na
 ```
 * Percentage of null values: 0.001133037% 
 
-Getting rid of unuseful variables
+#### Getting rid of unuseful variables
 * Photo, Flag, ID, CLUB LOGO, REAL FACE
 * LS : RB
 
