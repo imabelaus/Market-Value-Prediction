@@ -1,5 +1,8 @@
 
-##            Imanol Belausteguigoitia Ibarrola                    
+##            Imanol Belausteguigoitia Ibarrola  
+
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+
 ![Screen Shot 2019-11-05 at 15 38 01](https://user-images.githubusercontent.com/44293686/68244446-d7386580-ffe2-11e9-8ad5-46c0f3d5cbd4.png)
 ###  FIFA19: Exploratory Data Analysis and Predictive Modelling
 
@@ -1023,6 +1026,6 @@ The best **RMSE is 0.7217**. This means that the model has an **average error of
 
 
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XHECZDy_ctg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
