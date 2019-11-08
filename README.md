@@ -117,8 +117,6 @@ FIFA19[,'Release.Clause'] <- gsub("M","",FIFA19[,'Release.Clause'])
 FIFA19[,'Weight'] <- gsub("lbs","",FIFA19[,'Value'])
 
 FIFA19[,'Height'] <- gsub("'",".",FIFA19[,'Height'])
-
-View(FIFA19)
 ```
 ###### Eliminated signs:
 * "$"
