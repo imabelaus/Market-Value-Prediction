@@ -15,11 +15,11 @@ Models like this can assist clubs to assign market value to their own football p
 
 ## Workflow
 
-**1. Data Cleaning**
-**2. Exploratory Analysis** 
-**3. 10 facts about the FIFA 19 Complete Dataset** 
-**4. Data Mining: Manchester United Case Study**
-**5. Predicting Market Value**
+* **1. Data Cleaning**
+* **2. Exploratory Analysis** 
+* **3. 10 facts about the FIFA 19 Complete Dataset** 
+* **4. Data Mining: Manchester United Case Study**
+* **5. Predicting Market Value**
 
 ---
 #     1.  Data Cleaning     
