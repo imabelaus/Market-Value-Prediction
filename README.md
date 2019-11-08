@@ -24,14 +24,6 @@ Models like this can assist clubs to assign market value to their own football p
 ---
 #     1.  Data Cleaning     
 
-
-Setting working directory, libraries and loading data
-
-```setwd("~/Downloads/")
-FIFA19 <- read.csv("FIFA19.csv")
-load("FIFA19_ML")
-```
-
 #### Downloading Libraries 
 
 ```library(caret)
@@ -43,6 +35,13 @@ library(mlbench)
 library(dummies)
 library(ggpubr)
 library(xgboost)
+```
+
+Setting working directory, libraries and loading data
+
+```setwd("~/Downloads/")
+FIFA19 <- read.csv("FIFA19.csv")
+load("FIFA19_ML")
 ```
 
 #### Our dataset 
