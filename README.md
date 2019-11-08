@@ -17,7 +17,7 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 
 ### Objectives
 
-* **Providing insights:** Assist player signings by filtering datapoints in dataset to privide useful information for scouts our staff dealing with buying/selling players.
+* **Providing insights:** Assist player signings by filtering datapoints to provide useful information for scouts our staff dealing with buying/selling players.
 
 * **Make accurate predictions:** Make a model to predict market value of fooball players. Clubs also have the opportunity to make assign a fair market price for players they want to buy and avoid paying too much for players and use wisely their budget.
 
