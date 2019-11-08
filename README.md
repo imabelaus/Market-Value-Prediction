@@ -1,7 +1,6 @@
 
 ##            Imanol Belausteguigoitia Ibarrola  
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 ![Screen Shot 2019-11-05 at 15 38 01](https://user-images.githubusercontent.com/44293686/68244446-d7386580-ffe2-11e9-8ad5-46c0f3d5cbd4.png)
 ###  FIFA19: Exploratory Data Analysis and Predictive Modelling
@@ -23,6 +22,10 @@ Models like this can assist clubs to assign market value to their own football p
 * **3. 10 facts about the FIFA 19 Complete Dataset** 
 * **4. Data Mining: Manchester United Case Study**
 * **5. Predicting Market Value**
+
+#### Want't to see video explanation?
+
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 ---
 #     1.  Data Cleaning     
