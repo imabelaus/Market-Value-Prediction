@@ -615,6 +615,10 @@ Suppose Manchester United wanted to make a model to predict the market value of 
 
 The following steps were made to the original dataset after cleaning the data. It is important to note that all models deployed only take numerical data.
 
+The following codelines contain the prerocessing of the following dataset:
+
+### PART I
+
 
 **I.	Dummification of the following variables:**
 Position
@@ -667,19 +671,24 @@ model_data = FIFA19_transformed_1[,-c(hc)]
 dim(model_data)
 dim(FIFA19_transformed_1)
 ```
-
-
+This throws us the following training dataset:
+* **1. Non PCA dataset(model_data.csv)** →  A dataset without highly correlated values (the threshold was 0.7 of correlation coefficient).  The dimension is of 59 columns and 18207 observations.
 ---
-There will be two datasets:
-
-**1. Non PCA dataset(model_data.csv)** →  A dataset without highly correlated values (the threshold was 0.7 of correlation coefficient).  The dimension is of 59 columns and 18207 observations.
-
-**2. PCA dataset	(pca_data.csv)**  → The dimension is of 47 columns and 18207 observations.
+### PART II
 
 
----
+```
+pca_process = preProcess(FIFA19_transformed_1, method=c("pca"))
+print(pca_process)
+pca_data <- predict(pca_process, FIFA19_transformed_1)
+dim(pca_data)
+```
+This throws us the give us a PCA training dataset:
+* **2. PCA dataset	(pca_data.csv)**  → The dimension is of 47 columns and 18207 observations.
 
-
+** We will work with two training datasets:*
+* A **non PCA** processed datset  ("model_data.csv")
+* A **PCA** dataset ("pca_data.csv")
 
 
 ---
@@ -694,42 +703,6 @@ dim(pca_data)
 ```
 
 
-```#write.csv(model_data, "model_data.csv")
-#write.csv(pca_data, "pca_data.csv")
-```
-
-
-##### Remove Value + insert as non-scaled
-
-```Value <- FIFA19$Value
-Value <- replace(Value, is.na(Value), 0)
-model_data_1 <- subset(model_data, select = -c(Value) )
-model_data_1 <- cbind(Value, model_data_1)
-
-pca_data_1 <- cbind(Value, pca_data)
-
-View(model_data_1)
-View(pca_data_1)
-```
-
-##### Predictor importance
-
-```set.seed(7)
-
-
-control <- trainControl(method="repeatedcv", number=10, repeats=3)
-model_imp <- train(Value~., data=model_data_1, method="lm", trControl=control)
-importance <- varImp(model_imp, scale=FALSE)
-print(importance)
-plot(importance)
-
-
-dim(model_data)
-
-model1 <- lm(Value ~., data = FIFA19_transformed)
-model1_results <- summary(model1)
-summary(model1)
-```
 
 --- 
 
@@ -742,7 +715,7 @@ Below is the formula used:
 ```tc <- trainControl(method = "cv", number = 10)```
 
 ### Linear Regression Models
-
+---
 
 ##### (1st model) Linear regression
 *contains all features
@@ -793,6 +766,7 @@ results_csv_PCA <- summary(lm1_cv_PCA)
 
 ---
 
+### Stochastic Gradient Boosting Models 
 ##### (1st) Stochastic Gradient Boosting 
 *with PCA dataset and all features
 
@@ -844,6 +818,7 @@ results_gbmFit2_pca
 ###### RMSE 0.98935
 
 ---
+### eXtreme Gradient Boosting models
 
 ##### (1st model) eXtreme Gradient Boosting with PCA
 
@@ -872,7 +847,7 @@ xgbFit1_pca <- train(Value ~ ., data = pca_data_1,
 results_xgbFit1_pca <- xgbFit1_pca
 ```
 
-
+##### (2nd model) eXtreme Gradient Boosting with PCA
 
 ```set.seed(7)
 
@@ -900,7 +875,7 @@ xgbFit2_pca_results <- xgbFit2_pca
 xgbFit2_pca_results
 ```
 
-##### third model
+##### (3rd model) eXtreme Gradient Boosting with PCA
 
 
 ```set.seed(7)
@@ -927,7 +902,7 @@ xgbFit3_pca <- train(Value ~ ., data = pca_data_1,
 xgbFit3_pca_results <- xgbFit3_pca
 xgbFit3_pca_results
 ```
-##### fourth model
+##### (4th model) eXtreme Gradient Boosting with PCA
 
 ```set.seed(7)
 
@@ -956,7 +931,9 @@ xgbFit4_pca_results
 
 ---
 
-##### Random   Forest   with   PCA
+### Random Forest models
+
+##### (1st model) Random   Forest   with   PCA
 
 ```set.seed(7)
 
@@ -978,7 +955,7 @@ rfFit_pca1_results <- rfFit_pca1
 rfFit_pca1_results
 ```
 
-##### (second model) Random   Forest   with   PCA
+##### (2nd model) Random   Forest   with   PCA
 
 
 ```set.seed(7)
@@ -999,6 +976,9 @@ rfFit_pca2 <- train(Value ~ .,
 rfFit_pca2_results <- rfFit_pca2
 rfFit_pca2_results
 ```
+--- 
+
+### SVM model
 
 ##### Support   Vector    Machines    with    PCA 
 
@@ -1012,36 +992,6 @@ svm_pca1_results
 
 ---
 
-##  Model Results
-
-
-###### Linear   Regression
-
-```results_lm1_cv
-results_lm2_cv
-lm3_cv
-results_csv_PCA
-```
-###### GBM
-
-```results_gbmFit1_pca
-results_gbmFit2_pca
-```
-###### XGB
-
-```results_xgbFit1_pca
-xgbFit2_pca_results 
-xgbFit3_pca_results
-xgbFit4_pca_results
-```
-###### Random Forest 
-
-```rfFit_pca1_results
-rfFit_pca2_results
-```
-###### SVM 
-
-```svm_pca1_results```
 
 ## Best Model
 
@@ -1068,5 +1018,8 @@ rfFit_pca2_results
 ### Interpretation
 
 The best **RMSE is 0.7217**. This means that the model has an **average error of $ 721,700 USD** when estimating market value. This is a good model since some players can be worth up to $ 100 million USD, while the average player is worth $ 5 million USD.
+
+
+
 
 
