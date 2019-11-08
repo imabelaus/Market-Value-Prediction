@@ -1037,4 +1037,8 @@ The best **RMSE is 0.7217**. This means that the model has an **average error of
 
 
 
+Notes:
 
+Why scale
+
+It is also important when features are measured in different units, e.g. feature A is measured in inches, feature B is measured in feet, and feature C is measured in dollars, that they are scaled in a way that they are weighted and/or represented equally.
