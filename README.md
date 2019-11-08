@@ -24,6 +24,7 @@ Models like this can assist clubs to assign market value to their own football p
 * **5. Predicting Market Value**
 
 #### Want't to see video explanation?
+## CLICK BELOW! 
 
 [![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
