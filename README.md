@@ -69,7 +69,8 @@ load("FIFA19_ML")
 
 #### Data Completeness
 
-```total_na <- sum(is.na(FIFA19))
+```
+total_na <- sum(is.na(FIFA19))
 total_data <- 18207 * 89 # dim 18207 X 89
 percentage_na <- total_na/total_data                
 percentage_na
