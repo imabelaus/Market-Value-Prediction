@@ -172,7 +172,7 @@ quantile(FIFA19$Overall)
   ggtitle("Player ratings Are Normally Distributed", subtitle = "The mean can be used as a measure of central tendancy")
 ```
 
-### Overall
+### Overall performance distribution
 Player ratings are normally distributed
 
 ![Screen Shot 2019-11-05 at 16 06 50](https://user-images.githubusercontent.com/44293686/68247316-95aab900-ffe8-11e9-9c54-2879fb71132e.png)
@@ -189,7 +189,7 @@ Player ratings are normally distributed
   geom_histogram(color = "white", fill = "darkgrey") +
   ggtitle("Player ages is not normally distributed", subtitle = "Left side distribution")
 ```
-### Ages
+### Ages distribution
 Player ages **are not** normally distributed.
 
 ![Screen Shot 2019-11-05 at 16 16 00](https://user-images.githubusercontent.com/44293686/68246873-b4f51680-ffe7-11e9-91bd-b2e9e47953a0.png)
