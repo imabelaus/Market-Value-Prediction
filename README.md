@@ -700,7 +700,7 @@ dim(pca_data)
 This throws us the give us a PCA training dataset:
 * **2. PCA dataset	(pca_data.csv)**  → The dimension is of 47 columns and 18207 observations.
 
-** We will work with two training datasets:*
+We will work with two training datasets:
 * A **non PCA** processed datset  ("model_data.csv")
 * A **PCA** dataset ("pca_data.csv")
 
