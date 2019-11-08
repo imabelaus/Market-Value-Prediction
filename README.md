@@ -125,6 +125,12 @@ FIFA19$Contract.Valid.Until <- as.numeric(FIFA19$Contract.Valid.Until)
 FIFA19$Wage <- as.numeric(FIFA19$Wage)
 FIFA19$Value <- as.numeric(FIFA19$Value)
 ```
+###### Transformed to numeric:
+* Release.Clause
+* Contract.Valid.Until
+* Wage 
+* Value
+
 #### Modified columns
 
 5 columns were modifies for technical purposes:
