@@ -616,7 +616,7 @@ Suppose Manchester United wanted to make a model to predict the market value of 
 The following steps were made to the original dataset after cleaning the data. It is important to note that all models deployed only take numerical data.
 
 
-I.	Dummification of the following variables:
+**I.	Dummification of the following variables:**
 Position
 Prefered.Foot
 Work.Rate  
@@ -630,20 +630,20 @@ FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Work.Rate, sep = "_"))
 View(FIFA19_1)
 ```
 
-II. 	Filtering to use only numerical data
+**II. 	Filtering to use only numerical data**
 
 ```
 numeric_FIFA19 <- FIFA19_1[sapply(FIFA19_1,is.numeric)]
 ```
 
-III. 	Drop near zero variance columns
+**III. 	Drop near zero variance columns**
 
 ```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
 
 dim(FIFA19)
 ```
 
-IV. 	Data center and scale data
+**IV. 	Data center and scale data**
 
 ```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
 FIFA19_transformed <- predict(preProc,numeric_FIFA19)
@@ -653,11 +653,11 @@ since it is centeres and scaled, we will its null values with "0"  (no need to d
 ```FIFA19_transformed <- replace(FIFA19_transformed, is.na(FIFA19_transformed), 0)```
  
 
-V. Reduce skewness (Box-Cox Transformation)
+**V. Reduce skewness (Box-Cox Transformation)**
 
 ```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))```
 
-VI. Remove highly correlated features
+**VI. Remove highly correlated features**
 
 ```df2 = cor(FIFA19_transformed_1)
 hc = findCorrelation(df2, cutoff=0.75) # putt any value as a "cutoff" 
@@ -669,15 +669,8 @@ dim(FIFA19_transformed_1)
 ```
 
 
-#### Data Pre Processing
-
-* guide https://machinelearningmastery.com/pre-process-your-dataset-in-r/
-
-
 ---
 There will be two datasets:
-
-
 
 **1. Non PCA dataset(model_data.csv)** →  A dataset without highly correlated values (the threshold was 0.7 of correlation coefficient).  The dimension is of 59 columns and 18207 observations.
 
