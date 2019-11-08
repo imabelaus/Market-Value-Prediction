@@ -11,9 +11,9 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 
 ### Challenges
 
-* **Lack of specific information:** 
+* **Lack of specific information:** Hiring personel might end up doing innadequate signings for not considering a good pool of players.
 
-* **Inadecuate pricing:** 
+* **Inadecuate pricing:** A club might may spend too much for a player that is not worth or sell a promisiong at low price. 
 
 ### Objectives
 
