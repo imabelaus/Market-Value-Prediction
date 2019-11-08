@@ -7,9 +7,17 @@
 
 ## Introduction
 
-This document analyses the **complete FIFA 19 video game dataset**, which contains attributes for every player registered in the latest edition of FIFA 19 database. The code was runned in R Studio, and it contains exploratory analysis, data mining and modelling to predict the market value of professional footballers contained in the FIFA 19 videogame developed by EA Games.
+This document analyses the **complete FIFA 19 video game dataset**, which contains attributes for every player registered in the latest edition of FIFA 19 database. The dataset was extracted from Kaggle (https://www.kaggle.com/karangadiya/fifa19) and the code was runned in R Studio. The project contains exploratory analysis, data mining and machine learning modelling analysis to predict the market value of professional soccer players.
 
-### Objective
+### Main problem
+
+Lack of info
+
+Models (too expensive)
+
+### Objectives
+
+Providing insights: Assist player signings by filtering datapoints in dataset.
 
 Make a model to predict market value of fooball players.
 
