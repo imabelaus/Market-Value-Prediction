@@ -5,11 +5,13 @@
 
 ## Introduction
 
-This document analyses the **complete FIFA 19 video game dataset**, which contains attributes for every player registered in the latest edition of FIFA 19 database. Exploratory analysis, data mining and modelling to predict the market value of footballers are contained in this work.
+This document analyses the **complete FIFA 19 video game dataset**, which contains attributes for every player registered in the latest edition of FIFA 19 database. The code was runned in R Studio, and it contains exploratory analysis, data mining and modelling to predict the market value of professional footballers contained in the FIFA 19 videogame developed by EA Games.
 
-The code was runned in R Studio, objective problem.
+#### Objective
 
-### Objective
+Make a model to predict market value of fooball players.
+
+Models like this can assist clubs to assign market value to their own football players in order to negotiate in market transfers. Clubs also have the opportunity to make assign a fair market price for players they want to buy and avoid paying too much for players.
 
 ## Workflow
 
