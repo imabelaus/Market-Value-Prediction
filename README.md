@@ -338,7 +338,7 @@ The average overall rating of the 20 highest rated teams in descending order.
 
   
   
-  ### Italian players dont have the most top players
+  ### However Italian teams dont have the most top players
   
 ![Screen Shot 2019-11-05 at 16 32 22](https://user-images.githubusercontent.com/44293686/68248023-04d4dd00-ffea-11e9-9cec-7ef7c9c7b351.png)
 
