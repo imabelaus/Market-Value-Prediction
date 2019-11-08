@@ -648,10 +648,10 @@ IV. 	Data center and scale data
 ```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
 FIFA19_transformed <- predict(preProc,numeric_FIFA19)
 ```
+since it is centeres and scaled, we will its null values with "0"  (no need to do complex imputations since they are so few)
 
-IV.  Data imputation (mean imputation) 
-
-
+```FIFA19_transformed <- replace(FIFA19_transformed, is.na(FIFA19_transformed), 0)```
+ 
 
 V. Reduce skewness (Box-Cox Transformation)
 
@@ -667,7 +667,6 @@ model_data = FIFA19_transformed_1[,-c(hc)]
 dim(model_data)
 dim(FIFA19_transformed_1)
 ```
-
 
 
 #### Data Pre Processing
