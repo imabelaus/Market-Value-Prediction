@@ -133,7 +133,8 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 #### Modified columns
 
-5 columns were modifies for technical purposes:
+5 columns were modified:
+
 * **Value (1), Wage (2), Release.Clause (3)** → This variables contained money signs such as “$”,  “€”, “K”, or “M” that had to be removed to be analyzed statistically. 
 * **Weight (4), Height (5)**  → This two features contained characters such as “lbs” that had to be removed in order to run algorithms.
 
