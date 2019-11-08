@@ -324,7 +324,7 @@ The average overall rating of the 20 highest rated teams in descending order.
   Just like the players below...
   
   
-  ![Screen Shot 2019-11-07 at 17 51 09](https://user-images.githubusercontent.com/44293686/68434586-5797cb80-0187-11ea-968f-455b8815b25d.png)
+ 
   
   ### Explain blah blahh
   
@@ -1023,5 +1023,6 @@ The best **RMSE is 0.7217**. This means that the model has an **average error of
 
 
 
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XHECZDy_ctg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
