@@ -37,12 +37,11 @@ library(ggpubr)
 library(xgboost)
 ```
 
-Setting working directory, libraries and loading data
+Setting working directory, loading data
 
 ```
 setwd("~/Downloads/")
 FIFA19 <- read.csv("FIFA19.csv")
-load("FIFA19_ML")
 ```
 
 #### Our dataset 
@@ -150,10 +149,7 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 #     2.  Exploratory Analysis     
 
-Intro blah blah blah
-
-graphs
-
+This section contains insights and visualization in order to have a better knowledge of soccer professional players distributions, stats and characteristics.
 
 
 ```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
@@ -337,7 +333,7 @@ The average overall rating of the 20 highest rated teams in descending order.
 
 #     3.  10 facts about the FIFA 19 Dataset    
 
-
+A great way to get to know more about a specific dataset is to display a top ten facts list:
 
 #### 1. Left footed players
 
@@ -528,7 +524,7 @@ dim(sanchez_replacement)
 head(sanchez_replacement[,2:8],5)
 new_sanchez <- subset(head(sanchez_replacement[,2:8],1))
 ```
-###### Player:  
+###### Player:  Timo Werner
 
 Juan Mata's replacement 
 
@@ -537,7 +533,7 @@ dim(mata_replacement)
 head(mata_replacement[,2:8],5)
 new_mata <-subset(head(mata_replacement[,2:8],1))
 ```
-###### Player:
+###### Player: F. Thauvin
 
 Ander Herrera's replacement
 
@@ -546,7 +542,7 @@ dim(herrera_replacement)
 head(herrera_replacement[,2:8],5)
 new_herrera <- subset(head(herrera_replacement[,2:8],1))
 ```
-###### Player:
+###### Player: Jorginho
 
 
 New centreback
@@ -556,7 +552,7 @@ dim(new_centerback)
 head(new_centerback[,2:8],5)
 new_1_centerback <- subset(head(new_centerback[,2:8],1))
 ```
-###### Player:
+###### Player:  N. Süle
 
 Matteo Darmian's replacement
 
@@ -565,7 +561,7 @@ dim(darmian_replacement)
 head(darmian_replacement[,2:8],5)
 new_darmian <- subset(head(darmian_replacement[,2:8],1))
 ```
-###### Player:
+###### Player: D. Alaba
 
 Getting a table of Man U's new signings.
 
@@ -619,18 +615,58 @@ Suppose Manchester United wanted to make a model to predict the market value of 
 
 The following steps were made to the original dataset after cleaning the data. It is important to note that all models deployed only take numerical data.
 
-Data preprocessing steps
 
 I.	Dummification of the following variables:
 Position
 Prefered.Foot
-Work.Rate      
+Work.Rate  
+
+```FIFA19_1 <- cbind(FIFA19, dummy(FIFA19$Position, sep = "_"))
+FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Preferred.Foot, sep = "_"))
+FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Work.Rate, sep = "_"))
+```
+
+```names(FIFA19_1)
+View(FIFA19_1)
+```
+
 II. 	Filtering to use only numerical data
-I decided to do this in order to speed the modelling process, this lets me experiment more with tuning parameters and feature selection.
-II. 	Drop near zero variance columns
-III. 	Data center and scale data
+
+```
+numeric_FIFA19 <- FIFA19_1[sapply(FIFA19_1,is.numeric)]
+```
+
+III. 	Drop near zero variance columns
+
+```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
+
+dim(FIFA19)
+```
+
+IV. 	Data center and scale data
+
+```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
+FIFA19_transformed <- predict(preProc,numeric_FIFA19)
+```
+
 IV.  Data imputation (mean imputation) 
-V. 	Reduce skewness (Box-Cox Transformation)
+
+
+
+V. Reduce skewness (Box-Cox Transformation)
+
+```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))```
+
+VI. Remove highly correlated features
+
+```df2 = cor(FIFA19_transformed_1)
+hc = findCorrelation(df2, cutoff=0.75) # putt any value as a "cutoff" 
+hc = sort(hc)
+model_data = FIFA19_transformed_1[,-c(hc)]
+
+dim(model_data)
+dim(FIFA19_transformed_1)
+```
 
 
 
@@ -650,71 +686,10 @@ There will be two datasets:
 
 
 ---
-#### Preprocessing Dataset 1 (Non PCA)
-
-```dim(FIFA19)```
-
-##### I. Near Zero Varince
-
-```FIFA19 <- FIFA19[, -nearZeroVar(FIFA19)]  ## removed only one predictor
-
-dim(FIFA19)
-```
-##### II. dummifing position, preferred foot and work rate
-
-```FIFA19_1 <- cbind(FIFA19, dummy(FIFA19$Position, sep = "_"))
-FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Preferred.Foot, sep = "_"))
-FIFA19_1 <- cbind(FIFA19_1, dummy(FIFA19$Work.Rate, sep = "_"))
-```
-
-```names(FIFA19_1)
-View(FIFA19_1)
-```
-
-```numeric_FIFA19 <- FIFA19_1[sapply(FIFA19_1,is.numeric)]
 
 
-names(numeric_FIFA19)
-dim(numeric_FIFA19)
-```
 
-##### III. center and scale
 
-```preProc <- preProcess(numeric_FIFA19, method=c('center','scale')) 
-FIFA19_transformed <- predict(preProc,numeric_FIFA19)
-```
-##### IV. normalization
-* since it is centeres and scaled, we will its null values with "0"  (no need to do complex imputations since they are so few)
-
-```FIFA19_transformed <- replace(FIFA19_transformed, is.na(FIFA19_transformed), 0)
-
-names(FIFA19_transformed)
-View(FIFA19_transformed)
-summary(FIFA19_transformed)
-```
-
-##### V. Skewness treatment
-
-```preprocessParams <- preProcess(FIFA19_transformed, method=c("BoxCox"))```
-##### summarize transform parameters
-```print(preprocessParams)```
-##### transform the dataset using the parameters
-```FIFA19_transformed_1 <- predict(preprocessParams, FIFA19_transformed)```
-##### summarize the transformed dataset (note pedigree and age)
-```summary(FIFA19_transformed_1)```
-
-##### DATASET 1 -> NON CORRELATED VALUES
-
-##### VI. remove high corr
-
-```df2 = cor(FIFA19_transformed_1)
-hc = findCorrelation(df2, cutoff=0.75) # putt any value as a "cutoff" 
-hc = sort(hc)
-model_data = FIFA19_transformed_1[,-c(hc)]
-
-dim(model_data)
-dim(FIFA19_transformed_1)
-```
 ---
 
 ##### Preprocessing Dataset 2 (PCA) 
