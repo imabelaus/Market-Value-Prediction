@@ -489,7 +489,6 @@ head(most_expectations[,2:8], 5)
 
 #     4. Manchester United Case Study    
 
-<a href="https://imgflip.com/gif/3g14vh"><img src="https://i.imgflip.com/3g14vh.gif" title="made at imgflip.com"/></a>
 
 ![Screen Shot 2019-11-05 at 15 59 17](https://user-images.githubusercontent.com/44293686/68248885-b1638e80-ffeb-11e9-91d8-ec3442b4628b.png)
 
