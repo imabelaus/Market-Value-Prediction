@@ -375,6 +375,7 @@ head(most_nationalities, 10)
 4. Argentina(937)
 5. France(914).
 
+<a href="https://imgflip.com/gif/3g111y"><img src="https://i.imgflip.com/3g111y.gif" title="made at imgflip.com"/></a>
 
 ![Screen Shot 2019-11-06 at 15 54 13](https://user-images.githubusercontent.com/44293686/68337644-f13f7a00-00ae-11ea-8636-9ff4d172207a.png)
 ___
@@ -388,6 +389,8 @@ head(top_100,10)
 ```
 ###### Answer: 
 Spain (14)
+
+<a href="https://imgflip.com/gif/3g11xy"><img src="https://i.imgflip.com/3g11xy.gif" title="made at imgflip.com"/></a>
 
 ![Screen Shot 2019-11-06 at 15 56 10](https://user-images.githubusercontent.com/44293686/68337615-e1c03100-00ae-11ea-9eed-cd3c0752e635.png)
 
@@ -403,7 +406,7 @@ head(oldest_player[,2:5],1)
 ###### Answer:
 Mexican goalkeeper Oscar Perez (45) 
 
-
+<a href="https://imgflip.com/gif/3g12jv"><img src="https://i.imgflip.com/3g12jv.gif" title="made at imgflip.com"/></a>
 ![Screen Shot 2019-11-06 at 15 54 40](https://user-images.githubusercontent.com/44293686/68337636-ee448980-00ae-11ea-8aa4-134bab085720.png)
 
 ___
@@ -420,7 +423,7 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
-
+<a href="https://imgflip.com/gif/3g12s0"><img src="https://i.imgflip.com/3g12s0.gif" title="made at imgflip.com"/></a>
 ![Screen Shot 2019-11-06 at 15 55 42](https://user-images.githubusercontent.com/44293686/68337629-e8e73f00-00ae-11ea-871a-900015a56fed.png)
 
 ___
@@ -433,6 +436,7 @@ head(eng[,2:5],5)
 ###### Answer:
 Harry Kane (89)
 
+<a href="https://imgflip.com/gif/3g13w4"><img src="https://i.imgflip.com/3g13w4.gif" title="made at imgflip.com"/></a>
 ![Screen Shot 2019-11-06 at 15 57 08](https://user-images.githubusercontent.com/44293686/68337610-de2caa00-00ae-11ea-8b30-52d9f44d8e11.png)
 
 ___
@@ -460,6 +464,8 @@ ___
 1. Lionel Messi (94), Cristiano Ronaldo (94)
 2. Neymar (92)
 
+<a href="https://imgflip.com/gif/3g147n"><img src="https://i.imgflip.com/3g147n.gif" title="made at imgflip.com"/></a>
+
 ![Screen Shot 2019-11-06 at 15 58 09](https://user-images.githubusercontent.com/44293686/68337592-d240e800-00ae-11ea-88f1-3908eb4c54cd.png)
 
 ___
@@ -484,6 +490,7 @@ head(most_expectations[,2:8], 5)
 
 #     4. Manchester United Case Study    
 
+<a href="https://imgflip.com/gif/3g14vh"><img src="https://i.imgflip.com/3g14vh.gif" title="made at imgflip.com"/></a>
 
 ![Screen Shot 2019-11-05 at 15 59 17](https://user-images.githubusercontent.com/44293686/68248885-b1638e80-ffeb-11e9-91d8-ec3442b4628b.png)
 
@@ -500,11 +507,14 @@ Let’s pretend we are part of the Manchester United recruitment team. For next 
 
 Suppose the club wants to find one replacement for each of those four player, plus one central defender to make their defense stronger since last season they lacked of top defenders. 
 The last seven years have not being good in terms of performance for the team. Since Sir Alex Ferguson, former manager leaved Manchester United, the club has not made the best managing decisions. Now with a new manager called Ole Gunnar Solskjaer the club wants to return to the previous signing strategy which contemplates the following points:
-Sign players that are not at their peak level but they have potential to be elite players (like they did with Cristiano, Beckham or Diego Forlan).
 
-Young players than can be part of the team for at least 4 years in a great level (less than 27 years old).
-Avoid spending enormous amounts of money for one player, that may be too risky (there are many examples in the post Ferguson era like Angel di María or Radamel Falcao).
-Players that are talented today and don’t need more than one season to give great performances.
+* Sign players that are not at their peak level but they have potential to be elite players (like they did with Cristiano, Beckham or Diego Forlan).
+
+* Contact young players than can be part of the team for at least 4 years in a great level (less than 27 years old).
+
+* Avoid spending enormous amounts of money for one player, that may be too risky (there are many examples in the post Ferguson era like Angel di María or Radamel Falcao).
+
+* Players that are talented today and don’t need more than one season to give great performances.
 
 ###  Approach
 
