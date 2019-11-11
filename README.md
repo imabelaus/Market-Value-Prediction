@@ -424,6 +424,7 @@ head(young_beasts[,2:5],10)
 5. L. Bailey (81)
 
 <a href="https://imgflip.com/gif/3g12s0"><img src="https://i.imgflip.com/3g12s0.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/3g15h1"><img src="https://i.imgflip.com/3g15h1.gif" title="made at imgflip.com"/></a>
 ![Screen Shot 2019-11-06 at 15 55 42](https://user-images.githubusercontent.com/44293686/68337629-e8e73f00-00ae-11ea-871a-900015a56fed.png)
 
 ___
