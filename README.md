@@ -421,7 +421,7 @@ head(young_beasts[,2:5],10)
 4. M. Rashford (81) 
 5. L. Bailey (81)
 
-<a href="https://imgflip.com/gif/3g12s0"><img src="https://i.imgflip.com/3g12s0.gif" title="made at imgflip.com"/></a>
+
 <a href="https://imgflip.com/gif/3g15h1"><img src="https://i.imgflip.com/3g15h1.gif" title="made at imgflip.com"/></a>
 
 
