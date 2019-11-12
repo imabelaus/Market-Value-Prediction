@@ -1041,10 +1041,6 @@ svm_pca1_results
 
 The best **RMSE is 0.7217**. This means that the model has an **average error of $ 721,700 USD** when estimating market value. This is a good model since some players can be worth up to $ 100 million USD, while the average player is worth $ 5 million USD.
 
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rOmqQqFm_AA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Notes:
 
 Why scale
