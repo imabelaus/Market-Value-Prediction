@@ -90,6 +90,15 @@ percentage_na
 ```
 * Percentage of null values: 0.001133037% 
 
+#### Impute null values
+
+```
+mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
+mean(FIFA19$Release.Clause, na.rm =TRUE)
+mean(FIFA19$Value, na.rm =TRUE)
+```
+* Mean imputation method
+
 #### Getting rid of unuseful variables
 
 ```FIFA19[,"Photo"] <- NULL
@@ -162,16 +171,6 @@ FIFA19$Value <- as.numeric(FIFA19$Value)
 
 This section contains insights and visualization in order to have a better knowledge of soccer professional players distributions, stats and characteristics.
 
-
-```mean(FIFA19$Contract.Valid.Until, na.rm =TRUE)
-mean(FIFA19$Release.Clause, na.rm =TRUE)
-mean(FIFA19$Value, na.rm =TRUE)
-```
-
-
-```range(FIFA19$Overall)
-quantile(FIFA19$Overall)
-```
 
 
 ```FIFA19 %>%
