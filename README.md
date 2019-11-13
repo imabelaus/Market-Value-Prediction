@@ -34,6 +34,7 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 
 [![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
+###### Note: Check the code script for detail in the codes!  
 ---
 #     1.  Data Cleaning     
 
