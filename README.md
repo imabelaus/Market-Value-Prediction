@@ -32,7 +32,6 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 #### REVIEW OF WHOLE PROJECT
 ##### CLICK BELOW 
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 ##### Note: Check the code script for detail in the codes!  
 ---
@@ -1041,8 +1040,14 @@ svm_pca1_results
 
 The best **RMSE is 0.7217**. This means that the model has an **average error of $ 721,700 USD** when estimating market value. This is a good model since some players can be worth up to $ 100 million USD, while the average player is worth $ 5 million USD.
 
-Notes:
+*
+*
+*
+*
+*
+*
+*
 
-Why scale
 
-It is also important when features are measured in different units, e.g. feature A is measured in inches, feature B is measured in feet, and feature C is measured in dollars, that they are scaled in a way that they are weighted and/or represented equally.
+
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
