@@ -30,14 +30,10 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 * **5. Predicting Market Value**
 --- 
 #### REVIEW OF WHOLE PROJECT
-##### CLICK BELOW 
-
-
+## CLICK BELOW!
 
 [![image](https://user-images.githubusercontent.com/44293686/69561933-3c490080-0f7c-11ea-93a4-03bf5629d7fe.png)](https://www.youtube.com/watch?v=EA-leLLTd-o&t=1s "Watch me doing it!")
 
-
-[![image](https://user-images.githubusercontent.com/44293686/69561434-5cc48b00-0f7b-11ea-911e-b9116bd8a0ab.png)](https://www.youtube.com/watch?v=EA-leLLTd-o&t=65s "Watch me doing it!")
 
 ##### Note: Check the code script for detail in the codes!  
 ---
