@@ -33,6 +33,8 @@ This document analyses the **complete FIFA 19 video game dataset**, which contai
 ##### CLICK BELOW 
 
 
+[![image](https://user-images.githubusercontent.com/44293686/69561434-5cc48b00-0f7b-11ea-911e-b9116bd8a0ab.png)](https://www.youtube.com/watch?v=EA-leLLTd-o&t=65s "Watch me doing it!")
+
 ##### Note: Check the code script for detail in the codes!  
 ---
 #     1.  Data Cleaning     
@@ -1051,3 +1053,4 @@ The best **RMSE is 0.7217**. This means that the model has an **average error of
 
 
 [![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+
